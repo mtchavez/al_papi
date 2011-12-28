@@ -4,7 +4,7 @@ module AlPapi
 
     attr_reader :message, :code, :path, :params
     
-    def initialize(_message, _code, _path, _params)
+    def initialize(_message, _code, _path, _params) # :nodoc:
       @message, @code, @path, @params = _message, _code, _path, _params
     end
 

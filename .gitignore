@@ -18,3 +18,5 @@ coverage/*
 coverage.data
 
 .rvmrc
+rdoc
+doc

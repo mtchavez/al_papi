@@ -20,7 +20,7 @@ A wrapper around the Partner API calls. Allows post, priority post and get calls
   
   req.priority_post { :keyword => 'Centaurs', :locale => 'en-us', :engine => 'google' }
 
-== Meta
+== License
 
 Written by Chavez
 

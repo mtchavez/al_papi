@@ -1,6 +1,6 @@
 module AlPapi
 
-  class Http # :nodoc:
+  class Http # :nodoc:all:
 
     def initialize(req)
       @api_req, @config = req, req.config
