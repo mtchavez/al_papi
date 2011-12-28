@@ -190,7 +190,7 @@ module AlPapi
       'es-mx',
       'es-pe',
       'es-us',
-      'es-ve'
+      'es-ve',
       'fr-ca',
       'fr-ch',
       'fr-fr',
@@ -206,7 +206,7 @@ module AlPapi
       'ru-ru',
       'sv-se',
       'tl-ph',
-      'vi-vn'
+      'vi-vn',
       'zh-cn',
       'zh-cn-tw',
       'zh-hk'

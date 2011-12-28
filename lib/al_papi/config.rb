@@ -5,7 +5,8 @@ module AlPapi
     DEFAULT_HOST = 'http://api.authoritylabs.com'
     DEFAULT_PORT = 80
 
-    attr_reader :api_key, :host, :port
+    attr_accessor :api_key
+    attr_reader   :host, :port
 
     ##
     #

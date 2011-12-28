@@ -2,7 +2,6 @@ module AlPapi
 
   class Request
 
-    attr_accessor :response, :success, :errors
     attr_reader   :config
     
     ##
@@ -16,7 +15,7 @@ module AlPapi
     end
     
     def http # :nodoc:
-      Http.new(self)
+      Http.new(@config)
     end
     
     ##
@@ -37,7 +36,7 @@ module AlPapi
     #               is sent a POST when results are returned.
 
     def post(params = {}, priority = false)
-      path = priority ? '/keywords/priority' : '/keyword'
+      path = priority ? '/keywords/priority' : '/keywords'
       http.post path, params
     end
     
@@ -69,14 +68,6 @@ module AlPapi
 
     def get(params = {})
       http.get '/keywords/get', params
-    end
-
-    ##
-    #
-    # Convenience method to determine if request was successfull or not
-
-    def success?
-      return @success
     end
 
   end

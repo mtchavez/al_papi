@@ -2,8 +2,10 @@ module AlPapi
 
   class Http # :nodoc:all:
 
-    def initialize(req)
-      @api_req, @config = req, req.config
+    attr_accessor :errors, :response, :success, :config
+
+    def initialize(_config)
+      @config, @errors, @success = _config, [], false
     end
 
     def get(path, params = {})
@@ -28,22 +30,22 @@ module AlPapi
         body = raw_res.body
         code = raw_res.code.to_i
 
-        @api_req.response = body
-        @api_req.errors   = []
+        self.response = body
+        self.errors   = []
 
         case code
         when 200
-          @api_req.response = JSON.parse body
-          @api_req.success = true
+          self.response = JSON.parse body
+          self.success = true
         when 204
-          @api_req.errors << RequestError.new('No Content', code, path, params)
+          self.errors << RequestError.new('No Content', code, path, params)
         when 401
-          @api_req.errors << RequestError.new('Invalid Auth Token Provided', code, path, params)
+          self.errors << RequestError.new('Invalid Auth Token Provided', code, path, params)
         else
-          @api_req.errors << RequestError.new(body, code, path, params)
+          self.errors << RequestError.new(body, code, path, params)
         end
 
-        @api_req
+        Response.new(self, code, path, params)
       end
     end
 
