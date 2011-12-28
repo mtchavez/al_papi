@@ -20,3 +20,4 @@ coverage.data
 .rvmrc
 rdoc
 doc
+.yardoc
