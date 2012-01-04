@@ -44,7 +44,8 @@ Post your keyword to the priority queue if you need results in a more timely man
 ### GET
 
 When you are ready to get your results you can do a GET request for your keyword-engine-locale combo:
-	res = req.post keyword: "Mad Scientist", engine: 'bing', locale: 'en-ca'
+	
+	res = req.get keyword: "Mad Scientist", engine: 'bing', locale: 'en-ca'
 		
 	if res.success?
 		p 'Canadian Bing Scientist Time'
@@ -53,6 +54,42 @@ When you are ready to get your results you can do a GET request for your keyword
 		p 'PAPI Fail'
 	end
 
+### Response
+
+When making an API request a response object is returned with any errors, http response code and http reponse body.
+
+	res = req.get keyword: "Mad Scientist", engine: 'bing', locale: 'en-ca'
+	
+	# Errors:
+	# Returns an array of error objects.
+	res.errors
+	
+	if res.errors.present?
+		res.errors.each do |error|
+			p error.code			# http repsonse code
+			p error.message		# error message
+			p error.params		# params of request
+			p error.path			# path of request
+		end
+	end
+	
+	# Success:
+	# Returns true or false if request was successful or not.
+	res.success?
+	
+	# Body:
+	# Returns body of response.
+	# On GET requests the body will be a hash of your results if successful.
+	res.body
+	
+	# Code:
+	# Returns http response code.
+	# 204: On GET requests when no data is available yet
+	# 200: Successful
+	# 401: Invalid api key
+	# 500: Server Error
+	res.code
+	
 ### Engines
 
 Supported engines are Google, Yahoo and Bing. To get a list of supported engines run the following:
