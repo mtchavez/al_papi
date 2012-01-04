@@ -14,7 +14,7 @@ module AlPapi
       @success, @errors = false, []
     end
     
-    def http # :nodoc:
+    def http # @private
       Http.new(@config)
     end
     

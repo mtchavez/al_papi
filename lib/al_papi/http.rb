@@ -1,6 +1,6 @@
 module AlPapi
 
-  class Http # :nodoc:all:
+  class Http # @private
 
     attr_accessor :errors, :response, :success, :config
 
@@ -35,7 +35,11 @@ module AlPapi
 
         case code
         when 200
-          self.response = JSON.parse body
+          begin 
+            parsed = JSON.parse body
+          rescue JSON::ParserError => e
+            self.response = body
+          end
           self.success = true
         when 204
           self.errors << RequestError.new('No Content', code, path, params)

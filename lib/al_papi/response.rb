@@ -4,7 +4,7 @@ module AlPapi
 
     attr_reader :success, :body, :errors, :code, :path, :params
 
-    def initialize(http, _code, _path, _params) # :nodoc:
+    def initialize(http, _code, _path, _params) # @private
       @success, @body, @errors = http.success, http.response, http.errors
       @code, @path, @params    = _code, _path, _params
     end
