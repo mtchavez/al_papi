@@ -90,6 +90,14 @@ When making an API request a response object is returned with any errors, http r
 	# 500: Server Error
 	res.code
 	
+	# Over Limit:
+	# Returns true or false if over hourly limit
+	res.over_limit?
+	
+	# Suspended:
+	# Returns true or false if your account has been suspended
+	res.over_limit?
+	
 ### Engines
 
 Supported engines are Google, Yahoo and Bing. To get a list of supported engines run the following:

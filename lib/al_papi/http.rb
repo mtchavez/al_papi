@@ -2,10 +2,10 @@ module AlPapi
 
   class Http # @private
 
-    attr_accessor :errors, :response, :success, :config
+    attr_accessor :errors, :response, :success, :config, :over_limit, :suspended
 
     def initialize(_config)
-      @config, @errors, @success = _config, [], false
+      @config, @errors, @success, @over_limit, @suspended = _config, [], false, false, false
     end
 
     def get(path, params = {})
@@ -45,6 +45,14 @@ module AlPapi
           self.errors << RequestError.new('No Content', code, path, params)
         when 401
           self.errors << RequestError.new('Invalid Auth Token Provided', code, path, params)
+        when 403
+          if body.match /Account Suspended/i
+            self.suspended = true
+            self.errors << RequestError.new('Account Suspended', code, path, params)
+          elsif body.match /Request Limit Exceeded/i
+            self.over_limit = true
+            self.errors << RequestError.new('Request Limit Exceeded', code, path, params)
+          end
         else
           self.errors << RequestError.new(body, code, path, params)
         end
