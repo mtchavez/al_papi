@@ -1,4 +1,6 @@
 source "https://rubygems.org"
 
-gem 'rspec'
 gem 'rest-client'
+gem 'rspec'
+gem 'yard'
+gem 'gemcutter'
