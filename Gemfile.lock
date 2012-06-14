@@ -3,6 +3,7 @@ GEM
   specs:
     diff-lcs (1.1.3)
     gemcutter (0.7.1)
+    hashie (1.2.0)
     mime-types (1.18)
     rest-client (1.6.7)
       mime-types (>= 1.16)
@@ -21,6 +22,7 @@ PLATFORMS
 
 DEPENDENCIES
   gemcutter
+  hashie
   rest-client
   rspec
   yard
