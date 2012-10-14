@@ -1,4 +1,4 @@
-require File.join( File.dirname(File.expand_path(__FILE__)), 'base')
+require 'spec_helper'
 
 describe AlPapi::Config do
   let(:config) { AlPapi::Config.new api_key: TEST_KEY }
