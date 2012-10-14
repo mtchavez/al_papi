@@ -9,13 +9,56 @@ A wrapper around the Partner API calls. Allows post, priority post and get calls
 
     gem install 'al_papi'
 
-## Usage
+## Configuration
 
-Make a request object using your api key:
+Set configuration options to be used on requests:
 
     require 'al_papi'
 
-    req = AlPapi::Request.new(api_key: 'yR43BtBDjadfavMy6a6aK0')
+    AlPapi.configure do |config|
+      config.api_key = 'yR43BtBDjadfavMy6a6aK0'
+    end
+
+## Account
+
+Account endpoint lets you get basic info about your account, current queue times and any system messages.
+
+    # Pass your account ID into the info method
+    @res = AlPapi::Account.info '1'
+    
+    # Response body will be JSON response
+    @res.body
+    
+    # You can use the parsed_body method for convenience to access data
+    @account_info = @res.parsed_body
+    @account_info.user.current_balance # 500.00
+    @account_info.queue.bing_time # 15
+    @account_info.messages.system # ['The system is back online!']
+
+Example response in JSON
+
+    {
+        "messages": {
+            "system": ['The system is back online!']
+        }, 
+        "queue": {
+            "bing_time": 15, 
+            "google_time": 3, 
+            "yahoo_time": 2
+        }, 
+        "user": {
+            "current_balance": 500.00, 
+            "current_get_count": 2000, 
+            "current_post_count": 1000, 
+            "hourly_get_limit": 2000, 
+            "hourly_post_limit": 1000
+        }
+    }
+
+## Keywords
+
+Keywords endpoint allows you to POST keywords you want SERPs for and to GET those results
+when they are ready.
 
 ### POST
 

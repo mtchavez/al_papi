@@ -16,9 +16,7 @@ module AlPapi
       request 'post', path, build_params(params)
     end
     
-    def build_params(params = nil)
-      return nil if params.empty?
-      return nil unless params.is_a?(Hash)
+    def build_params(params = {})
       params.merge(:auth_token => @config.api_key, :format => 'json')
     end
 

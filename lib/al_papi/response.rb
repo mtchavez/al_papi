@@ -34,6 +34,11 @@ module AlPapi
       return @suspended
     end
 
+    def parsed_body
+      hash = JSON.parse(@body) rescue {}
+      Hashie::Mash.new hash
+    end
+
   end
 
 end

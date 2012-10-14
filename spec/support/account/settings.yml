@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.authoritylabs.com/account/79?auth_token=123456htva2421eda89h&format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - ! '"f0a3cc4d241f5d73f96161252d616e31"'
+      Server:
+      - nginx/0.8.54 + Phusion Passenger 3.0.2 (mod_rails/mod_rack)
+      Set-Cookie:
+      - _partner-api_session=BAh7ByIZd2FyZGVuLnVzZXIudXNlci5rZXlbCCIJVXNlclsGaRoiIiQyYSQxMCRGR1NEeGxWdUs4N0tncndLbDk5L3guIg9zZXNzaW9uX2lkIiVkNzQ3NWZkMWZhMGY3Nzc4MGY4MzM5MGI1NWZiMmZhOQ%3D%3D--f8604f9c8a9803654ff2e57f1e50486c1fcc79fb;
+        path=/; HttpOnly
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.2
+      X-Runtime:
+      - '0.104532'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '220'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"messages":{"system":[]},"queue":{"yahoo_time":2,"bing_time":15,"google_time":3},"user":{"current_get_count":5822,"current_post_count":2,"hourly_post_limit":160000,"hourly_get_limit":300000,"current_balance":-60471.16}}'
+    http_version: 
+  recorded_at: Sun, 14 Oct 2012 22:05:43 GMT
+- request:
+    method: get
+    uri: http://api.authoritylabs.com/account/79.json?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - nginx/0.8.54 + Phusion Passenger 3.0.2 (mod_rails/mod_rack)
+      Status:
+      - '401'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.2
+      X-Runtime:
+      - '0.047145'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '61'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"error":"You need to sign in or sign up before continuing."}'
+    http_version: 
+  recorded_at: Sun, 14 Oct 2012 22:07:25 GMT
+recorded_with: VCR 2.2.5

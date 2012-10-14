@@ -9,6 +9,7 @@ $LOAD_PATH << "#{project_root}/lib"
 require 'rubygems'
 require 'al_papi'
 require 'vcr'
+require 'pry'
 
 Dir[("#{project_root}/spec/support/**/*.rb")].each {|f| require f}
 
@@ -16,6 +17,15 @@ RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
+
+  config.extend  VCR::RSpec::Macros
+
+  config.before do
+    AlPapi.configure do |c|
+      c.api_key = TEST_KEY
+    end
+  end
+
 end
 
 VCR.configure do |config|
