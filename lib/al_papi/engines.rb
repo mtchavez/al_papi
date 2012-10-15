@@ -3,7 +3,7 @@ module AlPapi
   class Engines
 
     def self.all
-      %w(google bing yahoo)
+      %w[google bing yahoo]
     end
 
   end
