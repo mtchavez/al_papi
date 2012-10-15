@@ -1,4 +1,4 @@
-AuthorityLabs Partner API Gem
+AuthorityLabs Partner API Gem [![Build Status](https://secure.travis-ci.org/mtchavez/al_papi.png)](http://travis-ci.org/mtchavez/al_papi?branch=master)
 =============================
 
 A wrapper around the Partner API calls. Allows post, priority post and get calls.
