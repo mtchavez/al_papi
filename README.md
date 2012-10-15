@@ -158,10 +158,7 @@ and return the results to your callback URL passed in or set for your account.
 Post the URL of the page you want to gain insight into and the callback URL knowing when your results are
 ready to get.
 
-    require 'al_papi'
-
-    web  = AlPapi::WebInsight.new(api_key: 'yR43BtBDjadfavMy6a6aK0')
-    resp = web.post url: 'http://www.qwiki.com', callback: 'http://your-callback-url.com'
+    res = AlPapi::WebInsight.post url: 'http://www.qwiki.com', callback: 'http://your-callback-url.com'
 
 ### GET
 
@@ -169,10 +166,7 @@ When your results are ready to get you will receive a callback that contains the
 to get the insight on your URL. In the callback you should receive a date_created and time_created to use
 in your get request. You will also use your original URL posted.
 
-    require 'al_papi'
-
-    web  = AlPapi::WebInsight.new(api_key: 'yR43BtBDjadfavMy6a6aK0')
-    resp = web.get url: 'http://www.qwiki.com', date_created: '2012-06-14', time_created: '01:50'
+    res = AlPapi::WebInsight.get url: 'http://www.qwiki.com', date_created: '2012-06-14', time_created: '01:50'
 
 ## Extras
 

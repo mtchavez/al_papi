@@ -1,0 +1,213 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.authoritylabs.com/web/insight?auth_token=123456htva2421eda89h&date_created=2012-10-15&format=json&time_created=04:01&url=http://authoritylabs.com/blog
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - ! '"02f9067740318836406b02dd2716b225"'
+      Server:
+      - nginx/0.8.54 + Phusion Passenger 3.0.2 (mod_rails/mod_rack)
+      Set-Cookie:
+      - _partner-api_session=BAh7ByIZd2FyZGVuLnVzZXIudXNlci5rZXlbCCIJVXNlclsGaRoiIiQyYSQxMCRGR1NEeGxWdUs4N0tncndLbDk5L3guIg9zZXNzaW9uX2lkIiU0YjlmOTE0ZTMxNGQ5MGQwOWI3NDI1ODBmMDM0ZWZkMQ%3D%3D--6091ded1685e825c9d920be1e8db0d3ccaade83c;
+        path=/; HttpOnly
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.2
+      X-Runtime:
+      - '1.257336'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"url":"http://authoritylabs.com/blog","version":null,"worker_id":"ip-10-28-89-45-web-insight","date_created":"2012-10-15","time_requested":"2012-10-15T03:59:11+00:00","time_created":"04:01","_id":"507b8a88358b4507d1000001","redirects":[{"url":"http://authoritylabs.com/blog","status_code":"301"},{"url":"http://authoritylabs.com/blog/","status_code":"200"}],"results":{"page_data":{"b_tags":[],"image_tags":[{"alt":"","src":"http://authoritylabs.com/wp-content/uploads/good-idea.jpg"},{"alt":"","src":"http://authoritylabs.com/wp-content/uploads/consumerist-seo-suicide1.png"},{"alt":"The
+        Death of SEO.","src":"http://www.seobook.com/images/deathofseo.png"},{"alt":"Gangplank","src":"//s3.amazonaws.com/main-sites-files/gangplank-logo.png"}],"strong_tags":[{"text":"PubCon
+        Kickoff Networking Event"},{"text":"Pubcon Monte Carlo Networking Reception"},{"text":"Raven
+        Tools Poker Tournament \u2013 Invite Only Event"},{"text":"Epic Dinner"},{"text":"Internet
+        Marketing Ninjas Save the Pandas and Penguins Party"},{"text":"Purpose Inc.
+        Poker Tournament"},{"text":"Pubcon Hofbr\u00e4uhaus Happy Hour Wrap Reception"}],"links":[{"url":"http://authoritylabs.com/","text":"AuthorityLabs","no_follow":false},{"url":"https://accounts.ala.bs","text":"SIGN
+        IN","no_follow":false},{"url":"http://feeds.feedburner.com/authoritylabsblog","text":"RSS","no_follow":false},{"url":"http://twitter.com/authoritylabs","text":"Twitter","no_follow":false},{"url":"http://facebook.com/authoritylabs","text":"Facebook","no_follow":false},{"url":"http://authoritylabs.com/tour/","text":"Tour","no_follow":false},{"url":"https://authoritylabs.com/pricing/","text":"Pricing","no_follow":false},{"url":"http://authoritylabs.com/blog/","text":"Blog","no_follow":false},{"url":"http://authoritylabs.com/support/","text":"Support","no_follow":false},{"url":"http://authoritylabs.com/blog/most-effective-link-request/","text":"The
+        Most Effective Link Request Email","no_follow":false},{"url":"https://twitter.com/joehall/statuses/250347497636130817","text":"copy
+        and paste an entire blog post on your","no_follow":false},{"url":"http://authoritylabs.com/blog/most-effective-link-request/#more-3668","text":"[Read
+        more...]","no_follow":false},{"url":"http://authoritylabs.com/blog/category/featured/","text":"Featured","no_follow":false},{"url":"http://authoritylabs.com/blog/category/strategy/","text":"Strategy","no_follow":false},{"url":"http://authoritylabs.com/blog/partner-api-tips/","text":"8
+        Tips To Get More From Our Partner API","no_follow":false},{"url":"http://authoritylabs.com/api/","text":"Partner
+        API","no_follow":false},{"url":"http://raventools.com","text":"Raven Tools","no_follow":false},{"url":"http://authoritylabs.com/blog/authoritylabs-august-2012/","text":"new
+        interface","no_follow":false},{"url":"http://authoritylabs.com/api/partner-api/#DelayedQueue","text":"delayed
+        queue or ","no_follow":false},{"url":"http://authoritylabs.com/api/partner-api/#immediate-queue","text":"immediate
+        queue","no_follow":false},{"url":"http://authoritylabs.com/blog/partner-api-tips/#more-3651","text":"[Read
+        more...]","no_follow":false},{"url":"http://authoritylabs.com/blog/category/featured/","text":"Featured","no_follow":false},{"url":"http://authoritylabs.com/blog/category/tips/","text":"Tips","no_follow":false},{"url":"http://authoritylabs.com/blog/pubcon-2012/","text":"PubCon
+        Vegas 2012 Events and Party List","no_follow":false},{"url":"http://pubcon.com","text":"PubCon
+        2012","no_follow":false},{"url":"http://www.pubcon.com/kickoff-networking-event","text":"PubCon
+        Kickoff Networking Event","no_follow":false},{"url":"http://www.pubcon.com/pub-to-host-networking-event","text":"Pubcon
+        Monte Carlo Networking Reception","no_follow":false},{"url":"http://www.montecarlo.com/restaurants/the-pub.aspx","text":"Monte
+        Carlo Resort and Casino The Pub & Keg Room","no_follow":false},{"url":"http://alanbleiweiss.com/about-alan/epicdinner/epic-dinner-vegas/","text":"Epic
+        Dinner","no_follow":false},{"url":"http://www.pampasusa.com/","text":"Pampas
+        Churrascaria","no_follow":false},{"url":"http://www.pubcon.com/internet-marketing-ninjas-wwf-charity-event","text":"Internet
+        Marketing Ninjas Save the Pandas and Penguins Party","no_follow":false},{"url":"http://www.mirage.com/nightlife/the-beatles-revolution-lounge.aspx","text":"Revolution
+        Lounge at Mirage","no_follow":false},{"url":"http://purposeincpoker2012.eventbrite.com/","text":"Purpose
+        Inc. Poker Tournament","no_follow":false},{"url":"http://www.hofbrauhauslasvegas.com/","text":"Hofbr\u00e4uhaus
+        Las Vegas","no_follow":false},{"url":"http://authoritylabs.com/blog/category/conferences-2/","text":"Conferences","no_follow":false},{"url":"http://authoritylabs.com/blog/consumerist-seo-suicide/","text":"The
+        Consumerist Commits SEO Suicide","no_follow":false},{"url":"http://consumerist.com","text":"Consumerist","no_follow":false},{"url":"http://googlewebmastercentral.blogspot.com/2011/01/how-to-deal-with-planned-site-downtime.html","text":"Google\u2019s
+        recommendation","no_follow":false},{"url":"http://www.johnon.com/","text":"John
+        Andrews","no_follow":false},{"url":"http://authoritylabs.com/blog/consumerist-seo-suicide/#more-3628","text":"[Read
+        more...]","no_follow":false},{"url":"http://authoritylabs.com/blog/category/featured/","text":"Featured","no_follow":false},{"url":"http://authoritylabs.com/blog/category/strategy/","text":"Strategy","no_follow":false},{"url":"http://authoritylabs.com/blog/wikipedia-data/","text":"Wikipedia
+        Owns Your Data. Get Over It.","no_follow":false},{"url":"http://authoritylabs.com/blog/category/featured/","text":"Featured","no_follow":false},{"url":"http://authoritylabs.com/blog/seo-infographics/","text":"4
+        Great SEO Infographics","no_follow":false},{"url":"http://www.seobook.com/learn-seo/infographics/death-of-seo.php","text":"The
+        Death of SEO.","no_follow":false},{"url":"http://www.seobook.com/learn-seo/infographics/","text":"SEO
+        Graphic","no_follow":false},{"url":"http://www.seobook.com/","text":"SEO Book","no_follow":false},{"url":"http://authoritylabs.com/blog/seo-infographics/#more-3606","text":"[Read
+        more...]","no_follow":false},{"url":"http://authoritylabs.com/blog/category/featured/","text":"Featured","no_follow":false},{"url":"http://authoritylabs.com/blog/category/infographics/","text":"Infographics","no_follow":false},{"url":"http://authoritylabs.com/blog/page/2/","text":"\u00ab
+        Older Posts","no_follow":false},{"url":"http://authoritylabs.com/blog/most-effective-link-request/","text":"The
+        Most Effective Link Request Email","no_follow":false},{"url":"http://authoritylabs.com/blog/partner-api-tips/","text":"8
+        Tips To Get More From Our Partner API","no_follow":false},{"url":"http://authoritylabs.com/blog/consumerist-seo-suicide/","text":"The
+        Consumerist Commits SEO Suicide","no_follow":false},{"url":"http://authoritylabs.com/blog/wikipedia-data/","text":"Wikipedia
+        Owns Your Data. Get Over It.","no_follow":false},{"url":"http://authoritylabs.com/blog/seo-infographics/","text":"4
+        Great SEO Infographics","no_follow":false},{"url":"#top","text":"UP","no_follow":false},{"url":"http://authoritylabs.com/contact/","text":"Email
+        Us","no_follow":false},{"url":"http://facebook.com/authoritylabs","text":"Follow
+        us on Facebook","no_follow":false},{"url":"http://twitter.com/authoritylabs","text":"Follow
+        us on Twitter","no_follow":false},{"url":"http://feeds.feedburner.com/authoritylabsblog","text":"Follow
+        RSS","no_follow":false},{"url":"http://authoritylabs.com","text":"AuthorityLabs","no_follow":false},{"url":"http://authoritylabs.com/","text":"Home","no_follow":false},{"url":"https://authoritylabs.com/pricing/","text":"Pricing","no_follow":false},{"url":"http://authoritylabs.com/api/","text":"API","no_follow":false},{"url":"http://authoritylabs.com/contact/","text":"Contact","no_follow":false},{"url":"http://authoritylabs.com/blog/","text":"Blog","no_follow":false},{"url":"http://authoritylabs.com/jobs/","text":"Jobs","no_follow":false},{"url":"http://authoritylabs.com/tour/","text":"Tour","no_follow":false},{"url":"http://authoritylabs.com/about/","text":"About","no_follow":false},{"url":"http://authoritylabs.com/affiliates/","text":"Affiliates","no_follow":false},{"url":"http://accounts.ala.bs","text":"Sign
+        In","no_follow":false},{"url":"http://authoritylabs.com/privacy/","text":"Privacy","no_follow":false},{"url":"http://authoritylabs.com/terms/","text":"Terms","no_follow":false},{"url":"http://authoritylabs.com/blog/most-effective-link-request/","text":"The
+        Most Effective Link Request Email","no_follow":false},{"url":"http://authoritylabs.com/blog/partner-api-tips/","text":"8
+        Tips To Get More From Our Partner API","no_follow":false},{"url":"http://authoritylabs.com/blog/consumerist-seo-suicide/","text":"The
+        Consumerist Commits SEO Suicide","no_follow":false},{"url":"http://authoritylabs.com/blog/wikipedia-data/","text":"Wikipedia
+        Owns Your Data. Get Over It.","no_follow":false}],"h3_tags":[{"text":"Monday,
+        October 15"},{"text":"Tuesday, October 16"},{"text":"Wednesday, October 17"},{"text":"Thursday,
+        October 18"}],"body":"\r\n\r\nAuthorityLabs\t\t\tSIGN INRSS\r\nTwitter\r\nFacebook\n\t\t\nTour\nPricing\nBlog\nSupport\n\n\t\r\n\t\t\t\t\r\n\t\t\t\t\n\n\t\t\t\tThe
+        Most Effective Link Request Email\n\t\t\n\t\tBy Ben Cook on October 12, 2012
+        \t\t\n\t\t\tAs soon as marketers figured out that links helped your site rank
+        in Google, SEO blogs started writing posts about how to get more links.\nOver
+        the years we\u2019ve burned through several link building ideas and trends
+        including reciprocal linking, link wheels, widget spam, paid links and link
+        networks.\nAnd, while many SEO agencies now have \u201coutreach\u201d teams
+        spamming webmasters with guest posting requests, few if any agencies are using
+        the most effective link request email I\u2019ve found.\nCopyright Infringement\nAs
+        the son of a graphic artist and husband to a talented photographer, I\u2019ve
+        become extremely (perhaps overly) sensitive to copyright infringement.\nWhile
+        it may be news to many bloggers and website owners, you can\u2019t just slap
+        any image you find in Google image search on your site. You also can\u2019t
+        just copy and paste an entire blog post on your site for your readers to enjoy.\nContent
+        and images, even those published on the web, are subject to copyright restrictions.\nAnd
+        while copyright can be a pain in the neck when you\u2019re trying to find
+        just the right image for your blog post, it can also be a gold mine of links
+        and occasionally additional income. [Read more...]\n\t\t\n\t\tFiled Under:
+        Featured, Strategy  \n\t\n\t\t\n\n\t\t\t\t8 Tips To Get More From Our Partner
+        API\n\t\t\n\t\tBy Brian LaFrance on October 10, 2012 \t\t\n\t\t\tOur Partner
+        API currently serves up hundreds of millions of requests per month. Not only
+        are our partners, such as Raven Tools, using it, we are taking advantage of
+        it for getting data into our new interface. Whether you\u2019re new to our
+        Partner API or you\u2019ve been using it for a while, there\u2019s a good
+        chance some of the following tips will help you get more out of our API. \nGo
+        Fast\nMany people that start out on our API are afraid to POST keywords at
+        full speed. I\u2019ve seen people put 30 second delays between POSTing keywords.
+        The API was built to handle just about anything that can be thrown at it and
+        scales to accommodate the needs of our users. The only real restrictions on
+        how fast you should post are your hourly limits and how fast your servers
+        can process callbacks. \nUse Custom Callback URLs\nWhen adding keywords to
+        either our delayed queue or immediate queue, you have the option to send a
+        custom callback URL for us to hit when we have data on that keyword. For the
+        sake of improved performance and easier tracking of callbacks, we recommend
+        passing a URL with an ID that matches up to an ID in your system. This can
+        be a keyword ID or just a POST ID to track which callback matches which post.
+        Running data at scale pretty much makes this a requirement. [Read more...]\n\t\t\n\t\tFiled
+        Under: Featured, Tips  \n\t\n\t\t\n\n\t\t\t\tPubCon Vegas 2012 Events and
+        Party List\n\t\t\n\t\tBy Brian LaFrance on October 5, 2012 \t\t\n\t\t\tWe\u2019re
+        less than 2 weeks away from PubCon 2012 and everyone is starting to wonder
+        what events are happening and when they\u2019re happening. Here are the various
+        events and parties that we know about. If you have an event you want added
+        to this list, let us know in the comments.\nMonday, October 15\nPubCon Kickoff
+        Networking Event \u2013 PubCon Badge Required\nWhere: Las Vegas Convention
+        Center South Hall\nWhen: 5:30 p.m. \u2013 8:00 p.m\nTuesday, October 16\nPubcon
+        Monte Carlo Networking Reception \u2013 Gold or Platinum pass-holders only.\nWhere:
+        Monte Carlo Resort and Casino The Pub & Keg Room\nWhen: 7:00 p.m. \u2013 9:00
+        p.m.\nRaven Tools Poker Tournament \u2013 Invite Only Event\nWhere: Wynn Poker
+        Room\nWhen: 8:00 p.m.\nWednesday, October 17\nEpic Dinner\nWhere: Pampas Churrascaria\nWhen:
+        7:00 p.m.\nInternet Marketing Ninjas Save the Pandas and Penguins Party\nWhere:
+        Revolution Lounge at Mirage\nWhen: 9:00 p.m. \u2013 12:00 a.m.\nPurpose Inc.
+        Poker Tournament\nWhere: Mirage Poker Room\nWhen: 7:00 p.m.\nThursday, October
+        18\nPubcon Hofbr\u00e4uhaus Happy Hour Wrap Reception \u2013 Gold or Platinum
+        pass-holders only.\nWhere: Hofbr\u00e4uhaus Las Vegas\nWhen: 5:00 p.m.\n\t\t\n\t\tFiled
+        Under: Conferences  \n\t\n\t\t\n\n\t\t\t\tThe Consumerist Commits SEO Suicide\n\t\t\n\t\tBy
+        Ben Cook on October 3, 2012 \t\t\n\t\t\t\nIt\u2019s not often we get to watch
+        an extremely popular site commit SEO suicide but that\u2019s exactly what\u2019s
+        going on over at Consumerist.\nOn September 20th the site was apparently hacked
+        and began redirecting users off to other spam sites. As is often the case,
+        the site was compromised via \u201csystems maintained by our former hosting
+        provider.\u201d\nUpon discovering the hack, the website was taken down, and
+        remained down for nearly a week. While site downtime isn\u2019t great for
+        a site in terms of SEO, it doesn\u2019t have to be a full fledged disaster.
+        In fact, the 503 HTTP result code (Service Unavailable) is made precisely
+        for this kind of issue and is Google\u2019s recommendation in a situation
+        like this (hat tip to John Andrews for teaching me the value of a 503 years
+        ago).\nUnfortunately, it appears the Consumerist folks either don\u2019t have
+        an SEO on staff, or don\u2019t have a competent one. Instead of serving up
+        a 503 code while they investigated the hack, each and every single URL on
+        Consumerist.com served up a 200 status code and displayed the same message
+        alerting their readers to what was going on.\n [Read more...]\n\t\t\n\t\tFiled
+        Under: Featured, Strategy  \n\t\n\t\t\n\n\t\t\t\tWikipedia Owns Your Data.
+        Get Over It.\n\t\t\n\t\tBy Sassi BoB on October 2, 2012 \t\t\n\t\t\t\n\t\t\n\t\tFiled
+        Under: Featured  \n\t\n\t\t\n\n\t\t\t\t4 Great SEO Infographics\n\t\t\n\t\tBy
+        Brian LaFrance on October 1, 2012 \t\t\n\t\t\tHere at AuthorityLabs, we\u2019re
+        big fans of infographics when they\u2019re full of useful information. With
+        so many mediocre infographics being passed around, it\u2019s sometimes difficult
+        to filter out the junk and find the gems. Regurgitating the same info as others
+        but with a new design really isn\u2019t worth anyone\u2019s time. The four
+        infographics below are good examples of being original and informative.\nSEO
+        Is Dead\n\nSEO Graphic by SEO Book\n [Read more...]\n\t\t\n\t\tFiled Under:
+        Featured, Infographics  \n\t\n\t\u00ab Older Posts\t\t\r\n\t\t\r\n\t\t\t\tFeatured
+        Posts\n\t\tThe Most Effective Link Request Email\r\n\t\t\t\t8 Tips To Get
+        More From Our Partner API\r\n\t\t\t\tThe Consumerist Commits SEO Suicide\r\n\t\t\t\tWikipedia
+        Owns Your Data. Get Over It.\r\n\t\t\t\t4 Great SEO Infographics\r\n\t\t\t\t\n\r\n\t\r\n\t\t\n    \t\n        UP\n        Get
+        in touch!\n            \n            260 South Arizona AvenueChandler, AZ
+        85225\n            Email Us\n            \n            \n            \n            \n            \tFollow
+        us on Facebook\n            \tFollow us on Twitter\n            \tFollow RSS\n            \n        \n        \n        \n        \n            AuthorityLabs\n            \n            Home\nPricing\nAPI\nContact\nBlog\nJobs\nTour\nAbout\nAffiliates\nSign
+        In\nPrivacy\nTerms\n            \u00a9 2012 - AuthorityLabs, LLC\n            Another  Company            \n            \n            \n            \t\t\t\t\t\t\tThe
+        Most Effective Link Request Email\r\n\t\t\t\t8 Tips To Get More From Our Partner
+        API\r\n\t\t\t\tThe Consumerist Commits SEO Suicide\r\n\t\t\t\tWikipedia Owns
+        Your Data. Get Over It.\r\n\t\t\t\t\n            \n            \n        \n    \n\n\r\n\r\nvar
+        _sf_async_config={uid:22000,domain:\"authoritylabs.com\"};\r\n(function(){\r\n  function
+        loadChartbeat() {\r\n    window._sf_endpt=(new Date()).getTime();\r\n    var
+        e = document.createElement(''script'');\r\n    e.setAttribute(''language'',
+        ''javascript'');\r\n    e.setAttribute(''type'', ''text/javascript'');\r\n    e.setAttribute(''src'',\r\n       ((\"https:\"
+        == document.location.protocol) ? \"https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/\"
+        : \"http://static.chartbeat.com/\") +\r\n       \"js/chartbeat.js\");\r\n    document.body.appendChild(e);\r\n  }\r\n  var
+        oldonload = window.onload;\r\n  window.onload = (typeof window.onload != ''function'')
+        ?\r\n     loadChartbeat : function() { oldonload(); loadChartbeat(); };\r\n})();\r\n\r\n\n\t\t\t$(function()
+        {\n\t\t\t\tvar $sidebar   = $(\"#gform_widget-3\"), \n\t\t\t\t\t$window    =
+        $(window),\n\t\t\t\t\toffset     = $sidebar.offset(),\n\t\t\t\t\ttopPadding
+        = 30;\n\t\t\t\t$window.scroll(function() {\n\t\t\t\t\tif ($window.scrollTop()
+        > offset.top) {\n\t\t\t\t\t\t$sidebar.stop().animate({\n\t\t\t\t\t\t\tmarginTop:
+        $window.scrollTop() - offset.top + topPadding\n\t\t\t\t\t\t});\n\t\t\t\t\t}
+        else {\n\t\t\t\t\t\t$sidebar.stop().animate({\n\t\t\t\t\t\t\tmarginTop: 0\n\t\t\t\t\t\t});\n\t\t\t\t\t}\n\t\t\t\t});\n\t\t\t});\n\t\t","h1_tags":[{"text":"AuthorityLabs"}],"h2_tags":[{"text":"The
+        Most Effective Link Request Email"},{"text":"Copyright Infringement"},{"text":"8
+        Tips To Get More From Our Partner API"},{"text":"Go Fast"},{"text":"Use Custom
+        Callback URLs"},{"text":"PubCon Vegas 2012 Events and Party List"},{"text":"The
+        Consumerist Commits SEO Suicide"},{"text":"Wikipedia Owns Your Data. Get Over
+        It."},{"text":"4 Great SEO Infographics"},{"text":"SEO Is Dead"}],"h4_tags":[{"text":"Featured
+        Posts"}]},"head_data":{"canonical":{"href":"http://authoritylabs.com/blog/","used":true},"meta_data":{"keywords":"","description":"","title":"Blog
+        - AuthorityLabs"}}}}'
+    http_version: 
+  recorded_at: Mon, 15 Oct 2012 04:05:57 GMT
+recorded_with: VCR 2.2.5

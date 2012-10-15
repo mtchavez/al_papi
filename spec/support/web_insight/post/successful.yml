@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.authoritylabs.com/web/insight
+    body:
+      encoding: US-ASCII
+      string: url=http%3A%2F%2Fauthoritylabs.com%2Fblog&callback=http%3A%2F%2Fmy.callback.com%2Fcallbacks&auth_token=123456htva2421eda89h&format=json
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '141'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - text/javascript; charset=utf-8
+      Etag:
+      - ! '"e0aa021e21dddbd6d8cecec71e9cf564"'
+      Server:
+      - nginx/0.8.54 + Phusion Passenger 3.0.2 (mod_rails/mod_rack)
+      Set-Cookie:
+      - _partner-api_session=BAh7ByIZd2FyZGVuLnVzZXIudXNlci5rZXlbCCIJVXNlclsGaRoiIiQyYSQxMCRGR1NEeGxWdUs4N0tncndLbDk5L3guIg9zZXNzaW9uX2lkIiVkYjUxM2I4ZjIxMGQwOTVhNjQ2MmQ4NjIxMDlkOGQwYw%3D%3D--7c117ed99fac0e74db55565837b451931c61d335;
+        path=/; HttpOnly
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.2
+      X-Runtime:
+      - '0.053126'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: OK
+    http_version: 
+  recorded_at: Mon, 15 Oct 2012 03:59:11 GMT
+recorded_with: VCR 2.2.5
