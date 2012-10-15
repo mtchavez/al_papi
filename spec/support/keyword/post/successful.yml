@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.authoritylabs.com/keywords
+    body:
+      encoding: US-ASCII
+      string: keyword=splash%20town&auth_token=123456htva2421eda89h&format=json
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '65'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - ! '"a8b638ffe7ee68a4f8c4a558677dbbd2"'
+      Server:
+      - nginx/0.8.54 + Phusion Passenger 3.0.2 (mod_rails/mod_rack)
+      Set-Cookie:
+      - _partner-api_session=BAh7ByIPc2Vzc2lvbl9pZCIlODhmMDUxYjFmMzI5ZmZjNzQyYzY2NWIyNGRkMjM2NzgiGXdhcmRlbi51c2VyLnVzZXIua2V5WwgiCVVzZXJbBmkaIiIkMmEkMTAkRkdTRHhsVnVLODdLZ3J3S2w5OS94Lg%3D%3D--8a893b346dba9c8aaf0b0d8b4cb7bb7b067b17ef;
+        path=/; HttpOnly
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.2
+      X-Runtime:
+      - '0.029595'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '46'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"OK","post_count":1,"google_time":3}'
+    http_version: 
+  recorded_at: Sun, 14 Oct 2012 23:41:35 GMT
+recorded_with: VCR 2.2.5

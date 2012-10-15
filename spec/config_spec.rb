@@ -1,13 +1,10 @@
 require 'spec_helper'
 
 describe AlPapi::Config do
-  let(:config) { AlPapi::Config.new api_key: TEST_KEY }
+
+  let(:config) { AlPapi::Config.new }
 
   describe 'initialize' do
-
-    it 'sets api key' do
-      config.api_key.should eql TEST_KEY
-    end
 
     it 'sets default host' do
       config.host.should eql AlPapi::Config::DEFAULT_HOST

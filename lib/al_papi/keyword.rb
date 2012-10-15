@@ -1,22 +1,6 @@
 module AlPapi
 
-  class Request
-
-    attr_reader   :config
-    
-    ##
-    # 
-    # [config]  * Hash { auth_key: 'your_auth_token' }
-    #           * OR AlPapi::Config
-
-    def initialize(config)
-      @config  = config.is_a?(AlPapi::Config) ? config : Config.new(config)
-      @success, @errors = false, []
-    end
-    
-    def http # @private
-      Http.new(@config)
-    end
+  class Keyword
     
     ##
     # == Params
@@ -35,17 +19,17 @@ module AlPapi
     #               Set specific callbacks here for each request. Callback a url that
     #               is sent a POST when results are returned.
 
-    def post(params = {}, priority = false)
+    def self.post(params = {}, priority = false)
       path = priority ? '/keywords/priority' : '/keywords'
-      http.post path, params
+      AlPapi.http.post path, params
     end
     
     ##
     # == Params
     #
-    # See post for required params
+    # See post method {AlPapi::Keyword.post} for required params
     
-    def priority_post(params = {})
+    def self.priority_post(params = {})
       post params, true
     end
 
@@ -66,8 +50,8 @@ module AlPapi
     # [data_format] <em>Optional</em> - 
     #               Default is JSON. Options are HTML or JSON.
 
-    def get(params = {})
-      http.get '/keywords/get', params
+    def self.get(params = {})
+      AlPapi.http.get '/keywords/get', params
     end
 
   end

@@ -64,7 +64,7 @@ when they are ready.
 
 Post your keyword-engine-locale combination to the API:
 
-    res = req.post keyword: "Centaur Love'n", engine: 'google', locale: 'en-us'
+    res = AlPapi::Keyword.post keyword: "Centaur Love'n", engine: 'google', locale: 'en-us'
 
     if res.success?
       p 'Centaur High Hoof'
@@ -76,7 +76,7 @@ Post your keyword-engine-locale combination to the API:
 
 Post your keyword to the priority queue if you need results in a more timely manner:
 
-    res = req.priority_post keyword: "Mad Scientist", engine: 'bing', locale: 'en-ca'
+    res = AlPapi::Keyword.priority_post keyword: "Mad Scientist", engine: 'bing', locale: 'en-ca'
 
     if res.success?
       p 'Canadian Bing Scientist Time'
@@ -88,7 +88,7 @@ Post your keyword to the priority queue if you need results in a more timely man
 
 When you are ready to get your results you can do a GET request for your keyword-engine-locale combo:
 
-    res = req.get keyword: "Mad Scientist", engine: 'bing', locale: 'en-ca'
+    res = AlPapi::Keyword.get keyword: "Mad Scientist", engine: 'bing', locale: 'en-ca'
 
     if res.success?
       p 'Canadian Bing Scientist Time'
@@ -124,6 +124,11 @@ When making an API request a response object is returned with any errors, http r
     # Returns body of response.
     # On GET requests the body will be a hash of your results if successful.
     res.body
+
+    # Parsed Body:
+    # Returns the parsed JSON body, if present, as a Hashie::Mash object.
+    # This can be useful to get an object with methods to call instead of
+    # indexing into nested hashes.
 
     # Code:
     # Returns http response code.
