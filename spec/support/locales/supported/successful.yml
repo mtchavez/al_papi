@@ -1,0 +1,249 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.authoritylabs.com/supported/google?auth_token=123456htva2421eda89h&format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - ! '"c4b2ee11b80fdd07ebd2418529e5e8ca"'
+      Server:
+      - nginx/0.8.54 + Phusion Passenger 3.0.2 (mod_rails/mod_rack)
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.2
+      X-Runtime:
+      - '0.070172'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"locales":{"hy-am":{"description":"Armenia - Armenian","tld":"http://www.google.am"},"ms-my":{"description":"Malaysia
+        - Malay","tld":"http://www.google.com.my"},"ru-ru":{"description":"Russia
+        - Russian","tld":"http://www.google.ru"},"es-ar":{"description":"Argentina
+        - Spainish","tld":"http://www.google.com.ar"},"en-id":{"description":"Indonesia
+        - English","tld":"http://www.google.co.id"},"ar-bh":{"description":"Bahrain
+        - Arabic","tld":"http://www.google.com.bh"},"en-ch":{"description":"Switzerland
+        - English","tld":"http://www.google.ch"},"so-so":{"description":"Somalia -
+        Somali","tld":"http://www.google.so"},"ky-kg":{"description":"Kyrgyzstan -
+        Kyrgyz","tld":"http://www.google.kg"},"pt-pt":{"description":"Portugal - Portugese","tld":"http://www.google.pt"},"es-py":{"description":"Paraguay
+        - Spanish","tld":"http://www.google.com.py"},"es-gt":{"description":"Guatemala
+        - Spanish","tld":"http://www.google.com.gt"},"en-na":{"description":"Nimibia
+        - English","tld":"http://www.google.com.na"},"mi-nz":{"description":"New Zealand
+        - Maori","tld":"http://www.google.co.nz"},"tn-bw":{"description":"Botswana
+        - Tswana","tld":"http://www.google.co.bw"},"cs-cz":{"description":"Czech Republic
+        - Czech","tld":"http://www.google.cz"},"en-au":{"description":"Australia -
+        English","tld":"http://www.google.com.au"},"fr-ca":{"description":"Canada
+        - French","tld":"http://www.google.ca"},"ar-lb":{"description":"Lebanon -
+        Arabic","tld":"http://www.google.com.lb"},"it-sm":{"description":"Sam Marino
+        - Italian","tld":"http://www.google.sm"},"fr-ht":{"description":"Haiti - French","tld":"http://www.google.ht"},"sv-se":{"description":"Sweden
+        - Swedish","tld":"http://www.google.se"},"de-at":{"description":"Austria -
+        German","tld":"http://www.google.at"},"es-uy":{"description":"Uruguay - Spanish","tld":"http://www.google.com.uy"},"es-cl":{"description":"Chile
+        - Spanish","tld":"http://www.google.cl"},"da-dk":{"description":"Denmark -
+        Danish","tld":"http://www.google.dk"},"yo-ng":{"description":"Nigeria - Yoruba","tld":"http://www.google.com.ng"},"en-ie":{"description":"Ireland
+        - English","tld":"http://www.google.ie"},"ar-eg":{"description":"Egypt - Arabic","tld":"http://www.google.com.eg"},"ar-jo":{"description":"Jordan
+        - Arabic","tld":"http://www.google.jo"},"de-ch":{"description":"Switzerland
+        - German","tld":"http://www.google.ch"},"ro-ro":{"description":"Romania -
+        Romanian","tld":"http://www.google.ro"},"nl-nl":{"description":"Netherlands
+        - Dutch","tld":"http://www.google.nl"},"en-my":{"description":"Malaysia -
+        English","tld":"http://www.google.com.my"},"fr-tg":{"description":"Togo -
+        French","tld":"http://www.google.tg"},"he-il":{"description":"Israel - Hebrew","tld":"http://www.google.co.il"},"ar-ly":{"description":"Libya
+        - Arabic","tld":"http://www.google.com.ly"},"fr-cm":{"description":"Cameroon
+        - French","tld":"http://www.google.cm"},"sk-sk":{"description":"Slovakia -
+        Slovak","tld":"http://www.google.sk"},"sv-fi":{"description":"Finland - Swedish","tld":"http://www.google.fi"},"ar-sa":{"description":"Saudi
+        Arabia - Arabic","tld":"http://www.google.com.sa"},"st-ls":{"description":"Lesotho
+        - Sesotho","tld":"http://www.google.co.ls"},"en-to":{"description":"Tonga
+        - English","tld":"http://www.google.to"},"fr-ml":{"description":"Mali - French","tld":"http://www.google.ml"},"zh-cn-sg":{"description":"Singapore
+        - Chinese","tld":"http://www.google.com.sg"},"fr-ma":{"description":"Morocco
+        - French","tld":"http://www.google.co.ma"},"ar-ae":{"description":"United
+        Arab Emirates - Arabic","tld":"http://www.google.ae"},"en-vn":{"description":"Vietnam
+        - English","tld":"http://www.google.com.vn"},"cr-sc":{"description":"Seychelles
+        - Seychellois Creole","tld":"http://www.google.sc"},"ko-kr":{"description":"Korea
+        - Korean","tld":"http://www.google.co.kr"},"jw-id":{"description":"Indonesia
+        - Javanese","tld":"http://www.google.co.id"},"pt-st":{"description":"Sao Tome
+        and Principe - Portugese","tld":"http://www.google.st"},"en-vc":{"description":"Saint
+        Vincent and the Grenadines - English","tld":"http://www.google.com.vc"},"tk-tm":{"description":"Turkmenistan
+        - Turkmen","tld":"http://www.google.tm"},"en-bk":{"description":"Pakistan
+        - English","tld":"http://www.google.com.pk"},"en-zw":{"description":"Zimbabwe
+        - English","tld":"http://www.google.co.zw"},"ar-iq":{"description":"Iraq -
+        Arabic","tld":"http://www.google.iq"},"es-pe":{"description":"Peru - Spanish","tld":"http://www.google.com.pe"},"sl-si":{"description":"Slovenia
+        - Slovenian","tld":"http://www.google.si"},"zh-hk-hk":{"description":"Hong
+        Kong - Chinese","tld":"http://www.google.com.hk"},"rm-ch":{"description":"Switzerland
+        - Rumantsch","tld":"http://www.google.ch"},"en-gh":{"description":"Ghana -
+        English","tld":"http://www.google.com.gh"},"mo-md":{"description":"Moldova
+        - Moldovan","tld":"http://www.google.md"},"en-za":{"description":"South Africa
+        - English","tld":"http://www.google.co.za"},"sw-tz":{"description":"Tanzania
+        - Swahili","tld":"http://www.google.co.tz"},"pt-br":{"description":"Brazil
+        - Portugese","tld":"http://www.google.com.br"},"ar-qa":{"description":"Qatar
+        - Arabic","tld":"http://www.google.com.qa"},"hu-hu":{"description":"Hungary
+        - Hungarian","tld":"http://www.google.hu"},"en-nz":{"description":"New Zealand
+        - English","tld":"http://www.google.co.nz"},"en-ck":{"description":"Cook Islands
+        - English","tld":"http://www.google.co.ck"},"zu-za":{"description":"South
+        Africa - IsiZulu","tld":"http://www.google.co.za"},"tl-ph":{"description":"Philippines
+        - Tagalog","tld":"http://www.google.com.ph"},"mn-mn":{"description":"Mongolia
+        - Mongolian","tld":"http://www.google.mn"},"kk-kz":{"description":"Kazakhstan
+        - Kazakh","tld":"http://www.google.kz"},"km-kh":{"description":"Cambodia -
+        Kmher","tld":"http://www.google.com.kh"},"fr-ga":{"description":"Gabon - French","tld":"http://www.google.ga"},"lv-lv":{"description":"Latvia
+        - Lithuanian","tld":"http://www.google.lv"},"ig-ng":{"description":"Nigeria
+        - Igbo","tld":"http://www.google.com.ng"},"en-pn":{"description":"Pitcairn
+        Island - English","tld":"http://www.google.pn"},"en-gi":{"description":"Gibraltar
+        - English","tld":"http://www.google.com.gi"},"es-ve":{"description":"Venezula
+        - Spanish","tld":"http://www.google.co.ve"},"fr-cd":{"description":"Rep Dem
+        du Congo - French","tld":"http://www.google.cd"},"en-zm":{"description":"Zambia
+        - English","tld":"http://www.google.co.zm"},"es-co":{"description":"Columbia
+        - Spanish","tld":"http://www.google.com.co"},"da-gl":{"description":"Greenland
+        - Danish","tld":"http://www.google.gl"},"it-it":{"description":"Italy - Italian","tld":"http://www.google.it"},"ms-bn":{"description":"Brunei
+        - Malay","tld":"http://www.google.com.bn"},"en-fj":{"description":"Fiji -
+        English","tld":"http://www.google.com.fj"},"fr-be":{"description":"Belgium
+        - French","tld":"http://www.google.be"},"bn-bd":{"description":"Bangaldesh
+        - Bengali","tld":"http://www.google.com.bd"},"et-ee":{"description":"Estonia
+        - Estonian","tld":"http://www.google.ee"},"ar-tn":{"description":"Tunisia
+        - Arabic","tld":"http://www.google.tn"},"fr-dz":{"description":"Algeria -
+        French","tld":"http://www.google.dz"},"vi-vn":{"description":"Vietnam - Vietnamese","tld":"http://www.google.com.vn"},"ru-et":{"description":"Estonia
+        - Russian","tld":"http://www.google.ee"},"en-sg":{"description":"Singapore
+        - English","tld":"http://www.google.com.sg"},"de-ro":{"description":"Romania
+        - German","tld":"http://www.google.ro"},"en-ca":{"description":"Canada - English","tld":"http://www.google.ca"},"ru-ua":{"description":"Ukraine
+        - Russian","tld":"http://www.google.com.ua"},"pt-mz":{"description":"Mozambique
+        - Portugese","tld":"http://www.google.mz"},"es-sp":{"description":"El Salvador
+        - Spanish","tld":"http://www.google.com.sv"},"es-pr":{"description":"Puerto
+        Rico - Spanish","tld":"http://www.google.com.pr"},"es-ec":{"description":"Ecuador
+        - Spanish","tld":"http://www.google.com.ec"},"sw-ck":{"description":"Kenya
+        - Swahili","tld":"http://www.google.co.ke"},"es-do":{"description":"Dominican
+        Republic - Spanish","tld":"http://www.google.com.do"},"el-gr":{"description":"Greece
+        - Greek","tld":"http://www.google.gr"},"fi-fl":{"description":"Finland - Finnish","tld":"http://www.google.fi"},"fr-bf":{"description":"Burkina
+        Faso - French","tld":"http://www.google.bf"},"en-sh":{"description":"Saint
+        Helena - English","tld":"http://www.google.sh"},"lt-lt":{"description":"Lithuania
+        - Lithuanian","tld":"http://www.google.lt"},"es-ni":{"description":"Nicaragua
+        - Spanish","tld":"http://www.google.com.ni"},"ms-sg":{"description":"Singapore
+        - Malay","tld":"http://www.google.com.sg"},"ja-jp":{"description":"Japan -
+        Japanese","tld":"http://www.google.co.jp"},"en-nf":{"description":"Norfolk
+        Island - English","tld":"http://www.google.com.nf"},"ca-ad":{"description":"Andorra
+        - Catalan","tld":"http://www.google.ad"},"om-ar":{"description":"Oman - Arabic","tld":"http://www.google.com.om"},"en-ug":{"description":"Uganda
+        - English","tld":"http://www.google.co.ug"},"mk-mk":{"description":"Macedonia
+        - Macedonian","tld":"http://www.google.mk"},"fr-cf":{"description":"Central
+        African Republic - French","tld":"http://www.google.cf"},"en-dm":{"description":"Dominica
+        - English","tld":"http://www.google.dm"},"en-th":{"description":"Thailand
+        - English","tld":"http://www.google.co.th"},"es-us":{"description":"United
+        States - Spanish","tld":"http://www.google.com"},"pt-tl":{"description":"Timor-Leste
+        - Portugese","tld":"http://www.google.tl"},"am-et":{"description":"Ethiopia
+        - Amharic","tld":"http://www.google.com.et"},"en-bz":{"description":"Belize
+        - English","tld":"http://www.google.com.bz"},"en-nr":{"description":"Nauru
+        - English","tld":"http://www.google.nr"},"en-cc":{"description":"Cocos Islands
+        - English","tld":"http://www.google.cc"},"no-no":{"description":"Norway -
+        Norweigian","tld":"http://www.google.no"},"ca-ct":{"description":"Spain -
+        Catalan","tld":"http://www.google.cat"},"en-vg":{"description":"British Virgin
+        Islands - English","tld":"http://www.google.vg"},"es-hn":{"description":"Honduras
+        - Spanish","tld":"http://www.google.hn"},"en-hk":{"description":"Hong Kong
+        - English","tld":"http://www.google.com.hk"},"mg-mg":{"description":"Madagascar
+        - Malagasy","tld":"http://www.google.mg"},"en-ng":{"description":"Nigeria
+        - English","tld":"http://www.google.com.ng"},"en-us":{"description":"United
+        States - English","tld":"http://www.google.com"},"en-ki":{"description":"Kiribati
+        - English","tld":"http://www.google.ki"},"en-ms":{"description":"Montserrat
+        - English","tld":"http://www.google.ms"},"ka-ge":{"description":"Georgia -
+        Kartuli","tld":"http://www.google.ge"},"fr-ne":{"description":"Niger - French","tld":"http://www.google.ne"},"tg-tj":{"description":"Tajikistan
+        - Tajik","tld":"http://www.google.com.tj"},"fr-cg":{"description":"Republic
+        of the Congo - French","tld":"http://www.google.cg"},"en-tt":{"description":"Trinidad
+        and Tobago","tld":"http://www.google.tt"},"es-cr":{"description":"Costa Rica
+        - Spanish","tld":"http://www.google.co.cr"},"en-ae":{"description":"United
+        Arab Emirates - English","tld":"http://www.google.ae"},"ne-np":{"description":"Nepal
+        - Hindi","tld":"http://www.google.com.np"},"en-fm":{"description":"Micronesia
+        - English","tld":"http://www.google.fm"},"ha-ng":{"description":"Nigeria -
+        Hausa","tld":"http://www.google.com.ng"},"fr-gp":{"description":"Guadeloupe
+        - French","tld":"http://www.google.gp"},"zh-cn-tw":{"description":"Taiwan
+        - Chinese","tld":"http://www.google.com.tw"},"lt-lv":{"description":"Latvia
+        - Latvian","tld":"http://www.google.lv"},"th-th":{"description":"Thailand
+        - Thai","tld":"http://www.google.co.th"},"en-mt":{"description":"Malta - English","tld":"http://www.google.com.mt"},"pt-cv":{"description":"Cape
+        Verde - Portugese","tld":"http://www.google.cv"},"en-be":{"description":"Belgium
+        - English","tld":"http://www.google.be"},"en-ws":{"description":"Samoa - English","tld":"http://www.google.com.vn"},"fr-sn":{"description":"Senegal
+        - French","tld":"http://www.google.sn"},"en-gm":{"description":"Gambia - English","tld":"http://www.google.gm"},"fr-ch":{"description":"Switzerland
+        - French","tld":"http://www.google.ch"},"be-by":{"description":"Belarus -
+        Belarusian","tld":"http://www.google.com.by"},"en-il":{"description":"Israel
+        - English","tld":"http://www.google.co.il"},"fr-bi":{"description":"Burundi
+        - French","tld":"http://www.google.bi"},"en-qa":{"description":"Qatar - English","tld":"http://www.google.com.qa"},"en-vi":{"description":"Virgin
+        Islands - English","tld":"http://www.google.co.vi"},"de-li":{"description":"Liechtenstein
+        - German","tld":"http://www.google.li"},"fr-tn":{"description":"Tunsia - French","tld":"http://www.google.tn"},"af-za":{"description":"South
+        Africa - Afrikaans","tld":"http://www.google.co.za"},"es-mx":{"description":"Mexico
+        - Spainish","tld":"http://www.google.com.mx"},"en-rw":{"description":"Rwanda
+        - English","tld":"http://www.google.rw"},"id-id":{"description":"Indonesia
+        - Indonesian","tld":"http://www.google.co.id"},"ps-af":{"description":"Afghanistan
+        - Persian","tld":"http://www.google.com.af"},"sw-cd":{"description":"Jamhuri
+        ya Kidemokrasia ya Kongo - Kiswahili","tld":"http://www.google.cd"},"hr-hr":{"description":"Croatia
+        - Croatian","tld":"http://www.google.hr"},"en-mu":{"description":"Mauritius
+        - English","tld":"http://www.google.mu"},"fr-fr":{"description":"France -
+        French","tld":"http://www.google.fr"},"nl-be":{"description":"Belgium - Dutch","tld":"http://www.google.be"},"tr-tr":{"description":"Turkey
+        - Turkish","tld":"http://www.google.com.tr"},"en-gy":{"description":"Guyana
+        - English","tld":"http://www.google.gy"},"de-be":{"description":"Belgium -
+        German","tld":"http://www.google.be"},"es-bo":{"description":"Bolivia - Spanish","tld":"http://www.google.com.bo"},"bg-bg":{"description":"Bulgaria
+        - Bulgarian","tld":"http://www.google.bg"},"fr-ci":{"description":"Cote d''lvoire
+        - French","tld":"http://www.google.ci"},"en-ph":{"description":"Philippines
+        - English","tld":"http://www.google.com.ph"},"ar-il":{"description":"Israel
+        - Arabic","tld":"http://www.google.co.il"},"uz-uz":{"description":"Uzbekistan
+        - Uzbek","tld":"http://www.google.co.uz"},"uk-ua":{"description":"Ukraine
+        - Ukranian","tld":"http://www.google.com.ua"},"en-ag":{"description":"Antigua
+        and Barbuda - English","tld":"http://www.google.com.ag"},"en-tk":{"description":"Tokelau
+        - English","tld":"http://www.google.tk"},"fr-bj":{"description":"Benin - French","tld":"http://www.google.bj"},"lo-la":{"description":"Laos
+        - Lao","tld":"http://www.google.la"},"en-vu":{"description":"Vanuatu - English","tld":"http://www.google.vu"},"en-lk":{"description":"Sri
+        Lanka - English","tld":"http://www.google.lk"},"de-lu":{"description":"Luxembourg
+        - German","tld":"http://www.google.lu"},"en-nu":{"description":"Niue - English","tld":"http://www.google.nu"},"es-es":{"description":"Spain
+        - Spanish","tld":"http://www.google.es"},"ar-ps":{"description":"Palestine
+        - Arabic","tld":"http://www.google.ps"},"en-sl":{"description":"Sierra Lionne
+        - English","tld":"http://www.google.com.sl"},"pl-pl":{"description":"Poland
+        - Polish","tld":"http://www.google.pl"},"zh-tw-tw":{"description":"Taiwan
+        - Chinese Traditional Han","tld":"http://www.google.com.tw"},"en-sa":{"description":"Saudi
+        Arabia - English","tld":"http://www.google.com.sa"},"hu-ro":{"description":"Romania
+        - Hungarian","tld":"http://www.google.ro"},"en-mv":{"description":"Maldives
+        - English","tld":"http://www.google.mv"},"fr-td":{"description":"Chad - French","tld":"http://www.google.td"},"xh-za":{"description":"South
+        Africa - IsiXhosa","tld":"http://www.google.co.za"},"en-uk":{"description":"United
+        Kingdom - English","tld":"http://www.google.co.uk"},"zh-cn-hk":{"description":"China
+        - Chinese (Simplified)","tld":"http://www.google.com.hk"},"fr-vn":{"description":"Vietnam
+        - French","tld":"http://www.google.com.vn"},"en-as":{"description":"American
+        Samoa - English","tld":"http://www.google.as"},"es-pa":{"description":"Panama
+        - Spanish","tld":"http://www.google.com.pa"},"ny-mw":{"description":"Malawi
+        - Swahili","tld":"http://www.google.mw"},"en-tw":{"description":"Taiwan -
+        English","tld":"http://www.google.com.tw"},"en-jm":{"description":"Jamaica
+        - English","tld":"http://www.google.com.jm"},"ga-ie":{"description":"Ireland
+        - Irish","tld":"http://www.google.ie"},"mt-mt":{"description":"Malta - Maltese","tld":"http://www.google.com.mt"},"ar-kw":{"description":"Kuwait
+        - Arabic","tld":"http://www.google.com.kw"},"hi-in":{"description":"India
+        - Hindi","tld":"http://www.google.co.in"},"is-is":{"description":"Iceland
+        - Icelandic","tld":"http://www.google.is"},"de-de":{"description":"Germany
+        - German","tld":"http://www.google.de"},"az-az":{"description":"Azerbaijan
+        - Azerbaijani","tld":"http://www.google.az"},"en-in":{"description":"India
+        - English","tld":"http://www.google.co.in"},"sr-rs":{"description":"Serbia
+        - Serbian","tld":"http://www.google.rs"},"it-ch":{"description":"Switzerland
+        - Italian","tld":"http://www.google.ch"},"en-bs":{"description":"Bahamas -
+        English","tld":"http://www.google.bs"},"pt-ao":{"description":"Angola - Portugese","tld":"http://www.google.it.ao"},"fr-dj":{"description":"Djibouti
+        - French","tld":"http://www.google.dj"},"en-sb":{"description":"Solomon Islands
+        - English","tld":"http://www.google.com.sb"},"en-bh":{"description":"Bahrain
+        - English","tld":"http://www.google.com.bh"},"zh-cn-vn":{"description":"Vietnam
+        - Chinese","tld":"http://www.google.com.vn"},"bs-ba":{"description":"Bosnia
+        and Hezegovina - Bosnian","tld":"http://www.google.ba"},"en-ua":{"description":"Ukraine
+        - English","tld":"http://www.google.com.ua"},"ru-lv":{"description":"Latvia
+        - Russian","tld":"http://www.google.lv"},"pt-br-br":{"description":"Brazil
+        - Portugese","tld":"http://www.google.com.br"},"en-ai":{"description":"Anguilla
+        - English","tld":"http://www.google.com.ai"},"ta-sg":{"description":"Singapore
+        - Tamil","tld":"http://www.google.com.sg"}},"engine":"google","supported":true}'
+    http_version: 
+  recorded_at: Mon, 15 Oct 2012 04:36:41 GMT
+recorded_with: VCR 2.2.5

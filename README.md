@@ -181,9 +181,44 @@ Supported engines are Google, Yahoo and Bing. To get a list of supported engines
 Supported locales differ by the engine being used. In order to make sure you are using a supported locale
 for the engine you are posting a keyword to there is a locales class to help you:
 
-    AlPapi::Locales.supported # returns an array of locales for the default engine Google
-    AlPapi::Locales.supported 'bing' # for other engines pass in the engine name
-    AlPapi::Locales.supported 'yahoo'
+### Supported
+
+A way to see all the supported locales for a specified engine
+
+    AlPapi::Locales.supported # defaults to google
+
+Example response
+
+    {
+      engine: google
+      locales: {
+        ko-kr: {
+          description: Korea - Korean
+          tld: http://www.google.co.kr
+        },
+        ...
+        el-gr: {
+          description: Greece - Greek
+          tld: http://www.google.gr
+        }
+      }
+      supported: true
+    }
+
+### Description
+
+You can query the API to see if a specific locale is supported for an engine and get a description of that locale.
+
+    AlPapi::Locales.description 'google', 'ko-kr'
+
+Example response
+
+    {
+      locale: ko-kr
+      description: Korea - Korean
+      supported: true
+      engine: google
+    }
 
 ## License
 

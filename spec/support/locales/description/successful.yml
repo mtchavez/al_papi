@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.authoritylabs.com/supported/google/ko-kr?auth_token=123456htva2421eda89h&format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - ! '"ebae8667db9764b0dfab0bfc6808b8d2"'
+      Server:
+      - nginx/0.8.54 + Phusion Passenger 3.0.2 (mod_rails/mod_rack)
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.2
+      X-Runtime:
+      - '0.007436'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '84'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"description":"Korea - Korean","locale":"ko-kr","engine":"google","supported":true}'
+    http_version: 
+  recorded_at: Mon, 15 Oct 2012 04:47:35 GMT
+recorded_with: VCR 2.2.5
