@@ -3,21 +3,14 @@ module AlPapi
   class Keyword
     
     ##
-    # == Params
     #
-    # [keyword]     <b>Required</b> - 
-    #               Your keyword you want to get results for
-    # [engine]      <em>Optional</em> - 
-    #               Defaults to google. Allowed engines are google, yahoo, bing.
-    # [locale]      <em>Optional</em> - 
-    #               Defaults to en-us. See AlPapi::Locales for supported locales.
-    # [pages_from]  <em>Optional</em> - 
-    #               Default is false. Google specific parameter to get results from
-    #               the locale passed in when set to true.
-    # [callback]    <em>Optional</em> - 
-    #               Default is set on your account through the website. 
-    #               Set specific callbacks here for each request. Callback a url that
-    #               is sent a POST when results are returned.
+    # POST a keyword/engine/locale combination to get SERP for.
+    #
+    # @param keyword    [String] *Required* - The keyword you are ready to get results for.
+    # @param engine     [String] _Optional_ - Defaults to google
+    # @param locale     [String] _Optional_ - Defaults to en-us. See {AlPapi::Locales} for supported locales.
+    # @param pages_from [String] _Optional_ - Defaults is false. Google specific parameter to get results from locale passed in when set to true.
+    # @param callback   [String] _Optional_ - Default is the callback you have set for your account. Set specific callbacks per request by using this paramerter. A POST is sent to this callback URL when results are returned.
 
     def self.post(params = {}, priority = false)
       path = priority ? '/keywords/priority' : '/keywords'
@@ -25,7 +18,6 @@ module AlPapi
     end
     
     ##
-    # == Params
     #
     # See post method {AlPapi::Keyword.post} for required params
     
@@ -34,21 +26,15 @@ module AlPapi
     end
 
     ##
-    # == Params
     #
-    # Parameters should be the same as what was posted to the Partner API where applies.
+    # Get SERP results for keyword already POSTed or in Partner API already.
+    # See parameters for what can be passed in.
     #
-    # [keyword]     <b>Required</b> - 
-    #               The keyword you are ready to get results for.
-    # [engine]      <em>Optional</em> - 
-    #               Defaults to google. Allowed engines are google, yahoo, bing.
-    # [locale]      <em>Optional</em> - 
-    #               Defaults to en-us. See AlPapi::Locales for supported locales.
-    # [rank_date]   <em>Optional</em> - 
-    #               Default is set to today UTC time.
-    #               Date should be in format of YYYY-MM-DD ie. 2011-12-28
-    # [data_format] <em>Optional</em> - 
-    #               Default is JSON. Options are HTML or JSON.
+    # @param keyword     [String] *Required* - The keyword you are ready to get results for.
+    # @param engine      [String] _Optional_ - Defaults to google
+    # @param locale      [String] _Optional_ - Defaults to en-us. See {AlPapi::Locales} for supported locales.
+    # @param rank_date   [String] _Optional_ - Defaults to today UTC time. Format of YYY-MM-DD ie. 2011-12-28
+    # @param data_format [String] _Optional_ - Default is JSON. If you want raw html pass "html" in for data_format
 
     def self.get(params = {})
       AlPapi.http.get '/keywords/get', params

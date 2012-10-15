@@ -1,18 +1,21 @@
 module AlPapi
 
+  ##
+  #
+  # Config class used internally.
+  # Configure API calls using AlPapi.configure
+
   class Config
 
     DEFAULT_HOST = 'http://api.authoritylabs.com'
-    DEFAULT_PORT = 80
+    DEFAULT_PORT = 80 # @private
 
     attr_accessor :api_key
-    attr_reader   :host, :port
+    attr_reader   :host, :port # @private
 
     ##
     #
-    # == Options
-    #
-    # [auth_key]  Your Partner API api key. Required to make any API requests  
+    # @private
 
     def initialize
       @host = DEFAULT_HOST

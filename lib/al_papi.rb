@@ -17,9 +17,18 @@ module AlPapi
 
   extend self
 
+  ##
+  # @example Configure takes block to set API key to be used in API calls.
+  #    AlPapi.configure do |config|
+  #      config.api_key = 'my-key'
+  #    end
+
   def configure
     yield config
   end
+
+  #
+  # @return [AlPapi::Config]
 
   def config
     @config ||= Config.new
