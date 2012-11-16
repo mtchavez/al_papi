@@ -4,6 +4,7 @@ AuthorityLabs Partner API Gem [![Build Status](https://secure.travis-ci.org/mtch
 A wrapper around the Partner API calls. Allows post, priority post and get calls.
 
 * Github: http://github.com/mtchavez/al_papi
+* [![endorse](http://api.coderwall.com/mtchavez/endorsecount.png)](http://coderwall.com/mtchavez)
 
 ## Install
 
