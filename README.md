@@ -1,4 +1,4 @@
-AuthorityLabs Partner API Gem [![Build Status](https://secure.travis-ci.org/mtchavez/al_papi.png)](http://travis-ci.org/mtchavez/al_papi?branch=master) [![Code Climate](https://codeclimate.com/github/mtchavez/al_papi.png)](https://codeclimate.com/github/mtchavez/al_papi)
+AuthorityLabs Partner API Gem
 =============================
 
 A wrapper around the Partner API calls. Allows post, priority post and get calls.
@@ -43,7 +43,7 @@ account_info.messages.system # ['The system is back online!']
 
 Example response in JSON
 
-```json
+```javascript
 {
     "messages": {
         "system": ['The system is back online!']
@@ -213,7 +213,7 @@ AlPapi::Locales.supported # defaults to google
 
 Example response
 
-```json
+```javascript
 {
   engine: google
   locales: {
@@ -241,7 +241,7 @@ AlPapi::Locales.description 'google', 'ko-kr'
 
 Example response
 
-```json
+```javascript
 {
   locale: ko-kr
   description: Korea - Korean
