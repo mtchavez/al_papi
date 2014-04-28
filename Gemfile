@@ -1,13 +1,7 @@
-source "https://rubygems.org"
+#ruby=2.1.1
+#ruby-gemset=al_papi
 
-gem 'rest-client'
-gem 'rspec'
-gem 'yard'
-gem 'gemcutter'
-gem 'hashie'
-gem 'simplecov'
-gem 'webmock'
-gem 'vcr'
-gem 'redcarpet'
-gem 'pry'
-gem 'rake'
+ruby '2.1.1'
+source 'https://rubygems.org'
+
+gemspec
