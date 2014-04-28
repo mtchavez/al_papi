@@ -15,7 +15,7 @@ module AlPapi
     def post(path, params = {})
       request 'post', path, build_params(params)
     end
-    
+
     def build_params(params = {})
       params.merge(:auth_token => @config.api_key, :format => 'json')
     end
@@ -24,7 +24,7 @@ module AlPapi
       url  = "#{@config.host}#{path}"
       args = http_verb == 'post' ? [http_verb, url, params] : [http_verb, url]
 
-      response = RestClient.send *args do |res, req, raw_res|
+      response = RestClient.send(*args) do |res, req, raw_res|
         body = raw_res.body
         code = raw_res.code.to_i
 
@@ -33,9 +33,9 @@ module AlPapi
 
         case code
         when 200
-          begin 
-            parsed = JSON.parse body
-          rescue JSON::ParserError => e
+          begin
+            JSON.parse body
+          rescue JSON::ParserError
             self.response = body
           end
           self.success = true
@@ -44,10 +44,10 @@ module AlPapi
         when 401
           self.errors << RequestError.new('Invalid Auth Token Provided', code, path, params)
         when 403
-          if body.match /Account Suspended/i
+          if body.match(/Account Suspended/i)
             self.suspended = true
             self.errors << RequestError.new('Account Suspended', code, path, params)
-          elsif body.match /Request Limit Exceeded/i
+          elsif body.match(/Request Limit Exceeded/i)
             self.over_limit = true
             self.errors << RequestError.new('Request Limit Exceeded', code, path, params)
           end
@@ -55,7 +55,7 @@ module AlPapi
           self.errors << RequestError.new(body, code, path, params)
         end
 
-        Response.new(self, code, path)
+        Response.new(self, code, path, params)
       end
     end
 
