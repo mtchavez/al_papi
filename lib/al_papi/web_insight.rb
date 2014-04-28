@@ -2,6 +2,8 @@ module AlPapi
 
   class WebInsight
 
+    ENDPOINT = '/web/insight'
+
     ##
     #
     # URL for the page you want insight into and the callback url you have implemented to know
@@ -13,7 +15,7 @@ module AlPapi
 
     def self.post(params = {})
       check_params Hashie::Mash.new(params), *%w[url callback]
-      AlPapi.http.post '/web/insight', params
+      request 'post', params
     end
 
     ##
@@ -27,8 +29,10 @@ module AlPapi
 
     def self.get(params = {})
       check_params Hashie::Mash.new(params), *%w[date_created time_created]
-      AlPapi.http.get '/web/insight', params
+      request 'get', params
     end
+
+  private
 
     ##
     #
@@ -39,6 +43,10 @@ module AlPapi
       param.each do |p|
         raise "#{p} parameter is required." if params[p].nil? || params[p.to_s].empty?
       end
+    end
+
+    def self.request(method, params = {})
+      AlPapi.http.send method, ENDPOINT, params
     end
 
   end
