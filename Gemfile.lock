@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    al_papi (1.0.2)
+    al_papi (1.0.3)
       hashie (~> 2.1.0, >= 2.1.0)
       rest-client (~> 1.6.7, >= 1.6.7)
 
