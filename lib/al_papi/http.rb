@@ -55,7 +55,7 @@ module AlPapi
           self.errors << RequestError.new(body, code, path, params)
         end
 
-        Response.new(self, code, path, params)
+        Response.new(self, code, path)
       end
     end
 
