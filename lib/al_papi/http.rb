@@ -22,9 +22,10 @@ module AlPapi
 
     def request(http_verb, path, params = nil)
       url  = "#{@config.host}#{path}"
-      args = http_verb == 'post' ? [http_verb, url, params] : [http_verb, url]
+      args = [http_verb, url]
+      args << params if http_verb == 'post'
 
-      response = RestClient.send(*args) do |res, req, raw_res|
+      RestClient.send(*args) do |res, req, raw_res|
         body = raw_res.body
         code = raw_res.code.to_i
 
