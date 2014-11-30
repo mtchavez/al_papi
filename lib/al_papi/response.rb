@@ -1,7 +1,5 @@
 module AlPapi
-
   class Response
-
     attr_reader :success, :body, :errors, :code, :path, :params, :over_limit, :suspeneded
 
     ##
@@ -9,10 +7,10 @@ module AlPapi
     #
     # @private
 
-    def initialize(http, _code, _path, _params) # @private
+    def initialize(http, code, path, params) # @private
       @success, @body, @errors = http.success, http.response, http.errors
       @over_limit, @suspended  = http.over_limit, http.suspended
-      @code, @path, @params    = _code, _path, _params
+      @code, @path, @params    = code, path, params
     end
 
     ##
@@ -21,7 +19,7 @@ module AlPapi
     # @return [Boolean]
 
     def success?
-      !!@success
+      @success ? true : false
     end
 
     ##
@@ -30,7 +28,7 @@ module AlPapi
     # @return [Boolean]
 
     def over_limit?
-      !!@over_limit
+      @over_limit ? true : false
     end
 
     ##
@@ -39,7 +37,7 @@ module AlPapi
     # @return [Boolean]
 
     def suspended?
-      !!@suspended
+      @suspended ? true : false
     end
 
     ##
@@ -48,10 +46,10 @@ module AlPapi
     # @return [Hashie::Mash]
 
     def parsed_body
-      hash = JSON.parse(@body) rescue {}
+      hash = JSON.parse(@body)
       Hashie::Mash.new hash
+    rescue
+      {}
     end
-
   end
-
 end

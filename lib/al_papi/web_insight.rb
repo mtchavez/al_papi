@@ -1,7 +1,5 @@
 module AlPapi
-
   class WebInsight
-
     ENDPOINT = '/web/insight'
 
     ##
@@ -10,7 +8,10 @@ module AlPapi
     # when results are ready to get.
     #
     # @param url      [String] *Required* - The web page you want to gain insight on.
-    # @param callback [String] *Required* - Default is the callback you have set for your account. Set specific callbacks per request by using this paramerter. A POST is sent to this callback URL when results are returned.
+    # @param callback [String] *Required* - Default is the callback you have set for
+    #                                       your account. Set specific callbacks per request
+    #                                       by using this paramerter. A POST is sent to this
+    #                                       callback URL when results are returned.
     # @raise [] When required parameter is not found.
 
     def self.post(params = {})
@@ -32,8 +33,6 @@ module AlPapi
       request 'get', params
     end
 
-  private
-
     ##
     #
     # Check if required params exist
@@ -41,14 +40,12 @@ module AlPapi
 
     def self.check_params(params, *param)
       param.each do |p|
-        raise "#{p} parameter is required." if params[p].nil? || params[p.to_s].empty?
+        fail "#{p} parameter is required." if params[p].nil? || params[p.to_s].empty?
       end
     end
 
     def self.request(method, params = {})
       AlPapi.http.send method, ENDPOINT, params
     end
-
   end
-
 end
