@@ -13,20 +13,20 @@ describe AlPapi::Keyword do
       end
 
       it 'returns response results' do
-        @res.success?.should eql(true)
-        @res.over_limit?.should eql(false)
-        @res.suspended?.should eql(false)
-        @res.body.should_not be_nil
-        @res.code.should eql 200
-        @res.params.should eql({ :keyword => 'splash town', :auth_token => TEST_KEY, :format => 'json'})
-        @res.path.should eql '/keywords'
+        expect(@res).to be_success
+        expect(@res).to_not be_over_limit
+        expect(@res).to_not be_suspended
+        expect(@res.body).to_not be_nil
+        expect(@res.code).to eql(200)
+        expect(@res.params).to eql({ :keyword => 'splash town', :auth_token => TEST_KEY, :format => 'json'})
+        expect(@res.path).to eql('/keywords')
       end
 
       it 'returns body with status of OK' do
         body_hash = @res.parsed_body
-        body_hash.status.should eql 'OK'
-        body_hash.post_count.should eql 1
-        body_hash.google_time.should eql 3
+        expect(body_hash.status).to eql('OK')
+        expect(body_hash.post_count).to eql 1
+        expect(body_hash.google_time).to eql 3
       end
 
     end
@@ -42,19 +42,19 @@ describe AlPapi::Keyword do
       end
 
       it 'returns response results' do
-        @res.success?.should eql(true)
-        @res.over_limit?.should eql(false)
-        @res.suspended?.should eql(false)
-        @res.body.should_not be_nil
-        @res.code.should eql 200
-        @res.params.should eql({ :keyword => 'splash town', :auth_token => TEST_KEY, :format => 'json'})
-        @res.path.should eql '/keywords/priority'
+        expect(@res).to be_success
+        expect(@res).to_not be_over_limit
+        expect(@res).to_not be_suspended
+        expect(@res.body).to_not be_nil
+        expect(@res.code).to eql 200
+        expect(@res.params).to eql({ :keyword => 'splash town', :auth_token => TEST_KEY, :format => 'json'})
+        expect(@res.path).to eql '/keywords/priority'
       end
 
       it 'returns body with status of OK' do
         body_hash = @res.parsed_body
-        body_hash.status.should eql 'OK'
-        body_hash.post_count.should eql 1
+        expect(body_hash.status).to eql 'OK'
+        expect(body_hash.post_count).to eql 1
       end
 
     end
@@ -70,17 +70,17 @@ describe AlPapi::Keyword do
       end
 
       it 'returns response results' do
-        @res.success?.should eql(true)
-        @res.over_limit?.should eql(false)
-        @res.suspended?.should eql(false)
-        @res.body.should_not be_nil
-        @res.code.should eql 200
+        expect(@res).to be_success
+        expect(@res).to_not be_over_limit
+        expect(@res).to_not be_suspended
+        expect(@res.body).to_not be_nil
+        expect(@res.code).to eql 200
       end
 
       it 'has serp results in body' do
         serp_results = @res.parsed_body
-        serp_results.rank_date.should eql '2012-10-15'
-        serp_results.serp.length.should eql 121
+        expect(serp_results.rank_date).to eql '2012-10-15'
+        expect(serp_results.serp.length).to eql 121
       end
 
     end
@@ -92,12 +92,12 @@ describe AlPapi::Keyword do
       end
 
       it 'returns response results' do
-        @res.success?.should eql(false)
-        @res.over_limit?.should eql(false)
-        @res.suspended?.should eql(false)
-        @res.body.should be_nil
-        @res.code.should eql 204
-        @res.path.should match '/keywords/get'
+        expect(@res).to_not be_success
+        expect(@res).to_not be_over_limit
+        expect(@res).to_not be_suspended
+        expect(@res.body).to be_nil
+        expect(@res.code).to eql 204
+        expect(@res.path).to match '/keywords/get'
       end
 
     end

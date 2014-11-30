@@ -11,18 +11,18 @@ describe AlPapi::Locales do
       end
 
       it 'returns response results' do
-        @res.success?.should eql(true)
-        @res.over_limit?.should eql(false)
-        @res.suspended?.should eql(false)
-        @res.body.should_not be_nil
-        @res.code.should eql 200
+        expect(@res).to be_success
+        expect(@res).to_not be_over_limit
+        expect(@res).to_not be_suspended
+        expect(@res.body).to_not be_nil
+        expect(@res.code).to eql 200
       end
 
       it 'returns all locales' do
         locales = @res.parsed_body.locales
-        locales.length.should eql 233
-        locales['en-us'].description.should eql 'United States - English'
-        locales['en-us'].tld.should eql 'http://www.google.com'
+        expect(locales.length).to eql 233
+        expect(locales['en-us'].description).to eql 'United States - English'
+        expect(locales['en-us'].tld).to eql 'http://www.google.com'
       end
 
     end
@@ -34,16 +34,16 @@ describe AlPapi::Locales do
       end
 
       it 'returns response results' do
-        @res.success?.should eql(true)
-        @res.over_limit?.should eql(false)
-        @res.suspended?.should eql(false)
-        @res.body.should_not be_nil
-        @res.code.should eql 200
+        expect(@res).to be_success
+        expect(@res).to_not be_over_limit
+        expect(@res).to_not be_suspended
+        expect(@res.body).to_not be_nil
+        expect(@res.code).to eql 200
       end
 
       it 'returns not supported description' do
-        @res.parsed_body.engine.should eql 'stratos is not supported.'
-        @res.parsed_body.supported.should eql(false)
+        expect(@res.parsed_body.engine).to eql 'stratos is not supported.'
+        expect(@res.parsed_body.supported).to eql(false)
       end
 
     end
@@ -59,19 +59,19 @@ describe AlPapi::Locales do
       end
 
       it 'returns response results' do
-        @res.success?.should eql(true)
-        @res.over_limit?.should eql(false)
-        @res.suspended?.should eql(false)
-        @res.body.should_not be_nil
-        @res.code.should eql 200
+        expect(@res).to be_success
+        expect(@res).to_not be_over_limit
+        expect(@res).to_not be_suspended
+        expect(@res.body).to_not be_nil
+        expect(@res.code).to eql 200
       end
 
       it 'returns locale description' do
         locale = @res.parsed_body
-        locale.engine.should eql 'google'
-        locale.locale.should eql 'ko-kr'
-        locale.description.should eql 'Korea - Korean'
-        locale.supported.should eql(true)
+        expect(locale.engine).to eql 'google'
+        expect(locale.locale).to eql 'ko-kr'
+        expect(locale.description).to eql 'Korea - Korean'
+        expect(locale.supported).to eql(true)
       end
 
     end
@@ -83,19 +83,19 @@ describe AlPapi::Locales do
       end
 
       it 'returns response results' do
-        @res.success?.should eql(true)
-        @res.over_limit?.should eql(false)
-        @res.suspended?.should eql(false)
-        @res.body.should_not be_nil
-        @res.code.should eql 200
+        expect(@res).to be_success
+        expect(@res).to_not be_over_limit
+        expect(@res).to_not be_suspended
+        expect(@res.body).to_not be_nil
+        expect(@res.code).to eql 200
       end
 
       it 'returns not supported description' do
         locale = @res.parsed_body
-        locale.engine.should eql 'google'
-        locale.locale.should eql 'ko-kr-jp'
-        locale.description.should eql 'ko-kr-jp is not supported'
-        locale.supported.should eql(false)
+        expect(locale.engine).to eql 'google'
+        expect(locale.locale).to eql 'ko-kr-jp'
+        expect(locale.description).to eql 'ko-kr-jp is not supported'
+        expect(locale.supported).to eql(false)
       end
 
     end

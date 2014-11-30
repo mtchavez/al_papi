@@ -18,7 +18,6 @@ require 'pry'
 Dir[("#{project_root}/spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
-  config.treat_symbols_as_metadata_keys_with_true_values = true
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
 
@@ -26,10 +25,6 @@ RSpec.configure do |config|
     AlPapi.configure do |c|
       c.api_key = TEST_KEY
     end
-  end
-
-  config.mock_with :rspec do |c|
-    c.syntax = :should
   end
 
   config.raise_errors_for_deprecations!
