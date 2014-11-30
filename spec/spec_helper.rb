@@ -4,6 +4,9 @@ SimpleCov.start do
   add_filter '/vendor/'
 end
 
+require 'coveralls'
+Coveralls.wear!
+
 project_root = File.expand_path(File.dirname(__FILE__) + "/..")
 $LOAD_PATH << "#{project_root}/lib"
 
