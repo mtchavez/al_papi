@@ -1,15 +1,16 @@
-AuthorityLabs Partner API Gem
-=============================
+# AuthorityLabs Partner API Gem
+
+[![Build Status](https://secure.travis-ci.org/mtchavez/al_papi.png)](http://travis-ci.org/mtchavez/al_papi?branch=master)
+[![Coverage Status](https://coveralls.io/repos/mtchavez/al_papi/badge.png?branch=update%2Fdependencies)](https://coveralls.io/r/mtchavez/al_papi?branch=update%2Fdependencies)
+[![Code Climate](https://codeclimate.com/github/mtchavez/al_papi.png)](https://codeclimate.com/github/mtchavez/al_papi)
 
 A wrapper around the Partner API calls. Allows post, priority post and get calls.
 
-* Github: http://github.com/mtchavez/al_papi
-* [![Build Status](https://secure.travis-ci.org/mtchavez/al_papi.png)](http://travis-ci.org/mtchavez/al_papi?branch=master)
-* [![Code Climate](https://codeclimate.com/github/mtchavez/al_papi.png)](https://codeclimate.com/github/mtchavez/al_papi)
-
 ## Install
 
-    gem install 'al_papi'
+```ruby
+gem install 'al_papi'
+```
 
 ## Configuration
 

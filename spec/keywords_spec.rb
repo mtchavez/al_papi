@@ -6,29 +6,27 @@ describe AlPapi::Keyword do
 
   describe 'post' do
 
-    context 'sucessful' do
-
-      use_vcr_cassette 'keyword/post/successful', :record => :none
+    context 'sucessful', vcr: { cassette_name: 'keyword/post/successful' } do
 
       before do
         @res = AlPapi::Keyword.post params
       end
 
       it 'returns response results' do
-        @res.success?.should be_true
-        @res.over_limit?.should be_false
-        @res.suspended?.should be_false
-        @res.body.should_not be_nil
-        @res.code.should eql 200
-        @res.params.should eql({ :keyword => 'splash town', :auth_token => TEST_KEY, :format => 'json'})
-        @res.path.should eql '/keywords'
+        expect(@res).to be_success
+        expect(@res).to_not be_over_limit
+        expect(@res).to_not be_suspended
+        expect(@res.body).to_not be_nil
+        expect(@res.code).to eql(200)
+        expect(@res.params).to eql({ :keyword => 'splash town', :auth_token => TEST_KEY, :format => 'json'})
+        expect(@res.path).to eql('/keywords')
       end
 
       it 'returns body with status of OK' do
         body_hash = @res.parsed_body
-        body_hash.status.should eql 'OK'
-        body_hash.post_count.should eql 1
-        body_hash.google_time.should eql 3
+        expect(body_hash.status).to eql('OK')
+        expect(body_hash.post_count).to eql 1
+        expect(body_hash.google_time).to eql 3
       end
 
     end
@@ -37,28 +35,26 @@ describe AlPapi::Keyword do
 
   describe 'priority post' do
 
-    context 'successful' do
-
-      use_vcr_cassette 'keyword/priority_post/successful', :record => :none
+    context 'successful', vcr: { cassette_name: 'keyword/priority_post/successful' } do
 
       before do
         @res = AlPapi::Keyword.priority_post params
       end
 
       it 'returns response results' do
-        @res.success?.should be_true
-        @res.over_limit?.should be_false
-        @res.suspended?.should be_false
-        @res.body.should_not be_nil
-        @res.code.should eql 200
-        @res.params.should eql({ :keyword => 'splash town', :auth_token => TEST_KEY, :format => 'json'})
-        @res.path.should eql '/keywords/priority'
+        expect(@res).to be_success
+        expect(@res).to_not be_over_limit
+        expect(@res).to_not be_suspended
+        expect(@res.body).to_not be_nil
+        expect(@res.code).to eql 200
+        expect(@res.params).to eql({ :keyword => 'splash town', :auth_token => TEST_KEY, :format => 'json'})
+        expect(@res.path).to eql '/keywords/priority'
       end
 
       it 'returns body with status of OK' do
         body_hash = @res.parsed_body
-        body_hash.status.should eql 'OK'
-        body_hash.post_count.should eql 1
+        expect(body_hash.status).to eql 'OK'
+        expect(body_hash.post_count).to eql 1
       end
 
     end
@@ -67,45 +63,41 @@ describe AlPapi::Keyword do
 
   describe 'get' do
 
-    context 'context' do
-
-      use_vcr_cassette 'keyword/get/successful', :record => :none
+    context 'context', vcr: { cassette_name: 'keyword/get/successful' } do
 
       before do
         @res = AlPapi::Keyword.get params
       end
 
       it 'returns response results' do
-        @res.success?.should be_true
-        @res.over_limit?.should be_false
-        @res.suspended?.should be_false
-        @res.body.should_not be_nil
-        @res.code.should eql 200
+        expect(@res).to be_success
+        expect(@res).to_not be_over_limit
+        expect(@res).to_not be_suspended
+        expect(@res.body).to_not be_nil
+        expect(@res.code).to eql 200
       end
 
       it 'has serp results in body' do
         serp_results = @res.parsed_body
-        serp_results.rank_date.should eql '2012-10-15'
-        serp_results.serp.length.should eql 121
+        expect(serp_results.rank_date).to eql '2012-10-15'
+        expect(serp_results.serp.length).to eql 121
       end
 
     end
 
-    context 'failed' do
-
-      use_vcr_cassette 'keyword/get/failed', :record => :none
+    context 'failed', vcr: { cassette_name: 'keyword/get/failed' } do
 
       before do
         @res = AlPapi::Keyword.get params
       end
 
       it 'returns response results' do
-        @res.success?.should be_false
-        @res.over_limit?.should be_false
-        @res.suspended?.should be_false
-        @res.body.should be_nil
-        @res.code.should eql 204
-        @res.path.should match '/keywords/get'
+        expect(@res).to_not be_success
+        expect(@res).to_not be_over_limit
+        expect(@res).to_not be_suspended
+        expect(@res.body).to be_nil
+        expect(@res.code).to eql 204
+        expect(@res.path).to match '/keywords/get'
       end
 
     end

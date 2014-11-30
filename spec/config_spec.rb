@@ -7,11 +7,11 @@ describe AlPapi::Config do
   describe 'initialize' do
 
     it 'sets default host' do
-      config.host.should eql AlPapi::Config::DEFAULT_HOST
+      expect(config.host).to eql(AlPapi::Config::DEFAULT_HOST)
     end
 
     it 'sets default port' do
-      config.port.should eql 80
+      expect(config.port).to eql(80)
     end
 
   end
