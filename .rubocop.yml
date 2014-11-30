@@ -1,0 +1,30 @@
+require: rubocop-rspec
+
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - vendor/**/*
+
+Documentation:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/MethodLength:
+  Max: 15
+
+Metrics/LineLength:
+  Max: 120
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%': '[]'
+    '%Q': '[]'
+    '%W': '[]'
+    '%i': '[]'
+    '%q': '[]'
+    '%r': '{}'
+    '%s': '[]'
+    '%w': '[]'
+    '%x': '[]'
