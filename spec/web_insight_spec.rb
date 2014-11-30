@@ -7,18 +7,16 @@ describe AlPapi::WebInsight do
 
   describe 'post' do
 
-    context 'successful' do
-
-      use_vcr_cassette 'web_insight/post/successful', :record => :none
+    context 'successful', vcr: { cassette_name: 'web_insight/post/successful' } do
 
       before do
         @res = AlPapi::WebInsight.post post_params
       end
 
       it 'returns response results' do
-        @res.success?.should be_true
-        @res.over_limit?.should be_false
-        @res.suspended?.should be_false
+        @res.success?.should eql(true)
+        @res.over_limit?.should eql(false)
+        @res.suspended?.should eql(false)
         @res.body.should_not be_nil
         @res.code.should eql 200
       end
@@ -33,18 +31,16 @@ describe AlPapi::WebInsight do
 
   describe 'get' do
 
-    context 'successful' do
-
-      use_vcr_cassette 'web_insight/get/successful', :record => :none
+    context 'successful', vcr: { cassette_name: 'web_insight/get/successful' } do
 
       before do
         @res = AlPapi::WebInsight.get get_params
       end
 
       it 'returns response results' do
-        @res.success?.should be_true
-        @res.over_limit?.should be_false
-        @res.suspended?.should be_false
+        @res.success?.should eql(true)
+        @res.over_limit?.should eql(false)
+        @res.suspended?.should eql(false)
         @res.body.should_not be_nil
         @res.code.should eql 200
       end

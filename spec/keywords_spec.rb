@@ -6,18 +6,16 @@ describe AlPapi::Keyword do
 
   describe 'post' do
 
-    context 'sucessful' do
-
-      use_vcr_cassette 'keyword/post/successful', :record => :none
+    context 'sucessful', vcr: { cassette_name: 'keyword/post/successful' } do
 
       before do
         @res = AlPapi::Keyword.post params
       end
 
       it 'returns response results' do
-        @res.success?.should be_true
-        @res.over_limit?.should be_false
-        @res.suspended?.should be_false
+        @res.success?.should eql(true)
+        @res.over_limit?.should eql(false)
+        @res.suspended?.should eql(false)
         @res.body.should_not be_nil
         @res.code.should eql 200
         @res.params.should eql({ :keyword => 'splash town', :auth_token => TEST_KEY, :format => 'json'})
@@ -37,18 +35,16 @@ describe AlPapi::Keyword do
 
   describe 'priority post' do
 
-    context 'successful' do
-
-      use_vcr_cassette 'keyword/priority_post/successful', :record => :none
+    context 'successful', vcr: { cassette_name: 'keyword/priority_post/successful' } do
 
       before do
         @res = AlPapi::Keyword.priority_post params
       end
 
       it 'returns response results' do
-        @res.success?.should be_true
-        @res.over_limit?.should be_false
-        @res.suspended?.should be_false
+        @res.success?.should eql(true)
+        @res.over_limit?.should eql(false)
+        @res.suspended?.should eql(false)
         @res.body.should_not be_nil
         @res.code.should eql 200
         @res.params.should eql({ :keyword => 'splash town', :auth_token => TEST_KEY, :format => 'json'})
@@ -67,18 +63,16 @@ describe AlPapi::Keyword do
 
   describe 'get' do
 
-    context 'context' do
-
-      use_vcr_cassette 'keyword/get/successful', :record => :none
+    context 'context', vcr: { cassette_name: 'keyword/get/successful' } do
 
       before do
         @res = AlPapi::Keyword.get params
       end
 
       it 'returns response results' do
-        @res.success?.should be_true
-        @res.over_limit?.should be_false
-        @res.suspended?.should be_false
+        @res.success?.should eql(true)
+        @res.over_limit?.should eql(false)
+        @res.suspended?.should eql(false)
         @res.body.should_not be_nil
         @res.code.should eql 200
       end
@@ -91,18 +85,16 @@ describe AlPapi::Keyword do
 
     end
 
-    context 'failed' do
-
-      use_vcr_cassette 'keyword/get/failed', :record => :none
+    context 'failed', vcr: { cassette_name: 'keyword/get/failed' } do
 
       before do
         @res = AlPapi::Keyword.get params
       end
 
       it 'returns response results' do
-        @res.success?.should be_false
-        @res.over_limit?.should be_false
-        @res.suspended?.should be_false
+        @res.success?.should eql(false)
+        @res.over_limit?.should eql(false)
+        @res.suspended?.should eql(false)
         @res.body.should be_nil
         @res.code.should eql 204
         @res.path.should match '/keywords/get'

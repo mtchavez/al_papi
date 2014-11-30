@@ -4,9 +4,7 @@ describe AlPapi::Account do
 
   describe 'info' do
 
-    context 'for your account' do
-
-      use_vcr_cassette 'account/settings', :record => :none
+    context 'for your account', vcr: { cassette_name: 'account/settings' } do
 
       before do
         @res = AlPapi::Account.info '79'
@@ -41,9 +39,7 @@ describe AlPapi::Account do
 
     end
 
-    context 'bad request' do
-
-      use_vcr_cassette 'account/another_account_settings', :record => :none
+    context 'bad request', vcr: { cassette_name: 'account/another_account_settings' } do
 
       before do
         @res = AlPapi::Account.info '78'

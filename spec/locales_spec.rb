@@ -4,18 +4,16 @@ describe AlPapi::Locales do
 
   describe 'supported' do
 
-    context 'for engine' do
-
-      use_vcr_cassette 'locales/supported/successful', :record => :none
+    context 'for engine', vcr: { cassette_name: 'locales/supported/successful' } do
 
       before do
         @res = AlPapi::Locales.supported
       end
 
       it 'returns response results' do
-        @res.success?.should be_true
-        @res.over_limit?.should be_false
-        @res.suspended?.should be_false
+        @res.success?.should eql(true)
+        @res.over_limit?.should eql(false)
+        @res.suspended?.should eql(false)
         @res.body.should_not be_nil
         @res.code.should eql 200
       end
@@ -29,25 +27,23 @@ describe AlPapi::Locales do
 
     end
 
-    context 'for bad engine' do
-
-      use_vcr_cassette 'locales/supported/bad', :record => :none
+    context 'for bad engine', vcr: { cassette_name: 'locales/supported/bad' } do
 
       before do
         @res = AlPapi::Locales.supported 'stratos'
       end
 
       it 'returns response results' do
-        @res.success?.should be_true
-        @res.over_limit?.should be_false
-        @res.suspended?.should be_false
+        @res.success?.should eql(true)
+        @res.over_limit?.should eql(false)
+        @res.suspended?.should eql(false)
         @res.body.should_not be_nil
         @res.code.should eql 200
       end
 
       it 'returns not supported description' do
         @res.parsed_body.engine.should eql 'stratos is not supported.'
-        @res.parsed_body.supported.should be_false
+        @res.parsed_body.supported.should eql(false)
       end
 
     end
@@ -56,18 +52,16 @@ describe AlPapi::Locales do
 
   describe 'description' do
 
-    describe 'for engine-locale' do
-
-      use_vcr_cassette 'locales/description/successful', :record => :none
+    describe 'for engine-locale', vcr: { cassette_name: 'locales/description/successful' } do
 
       before do
         @res = AlPapi::Locales.description 'google', 'ko-kr'
       end
 
       it 'returns response results' do
-        @res.success?.should be_true
-        @res.over_limit?.should be_false
-        @res.suspended?.should be_false
+        @res.success?.should eql(true)
+        @res.over_limit?.should eql(false)
+        @res.suspended?.should eql(false)
         @res.body.should_not be_nil
         @res.code.should eql 200
       end
@@ -77,23 +71,21 @@ describe AlPapi::Locales do
         locale.engine.should eql 'google'
         locale.locale.should eql 'ko-kr'
         locale.description.should eql 'Korea - Korean'
-        locale.supported.should be_true
+        locale.supported.should eql(true)
       end
 
     end
 
-    describe 'for bad engine-locale' do
-
-      use_vcr_cassette 'locales/description/bad', :record => :none
+    describe 'for bad engine-locale', vcr: { cassette_name: 'locales/description/bad' } do
 
       before do
         @res = AlPapi::Locales.description 'google', 'ko-kr-jp'
       end
 
       it 'returns response results' do
-        @res.success?.should be_true
-        @res.over_limit?.should be_false
-        @res.suspended?.should be_false
+        @res.success?.should eql(true)
+        @res.over_limit?.should eql(false)
+        @res.suspended?.should eql(false)
         @res.body.should_not be_nil
         @res.code.should eql 200
       end
@@ -103,7 +95,7 @@ describe AlPapi::Locales do
         locale.engine.should eql 'google'
         locale.locale.should eql 'ko-kr-jp'
         locale.description.should eql 'ko-kr-jp is not supported'
-        locale.supported.should be_false
+        locale.supported.should eql(false)
       end
 
     end
