@@ -14,7 +14,7 @@ module AlPapi
       @over_limit, @suspended  = http.over_limit, http.suspended
       @code, @path, @params    = _code, _path, _params
     end
-    
+
     ##
     #
     # Convenience method to determine if request was successfull or not

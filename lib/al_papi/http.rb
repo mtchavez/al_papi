@@ -17,7 +17,7 @@ module AlPapi
     end
 
     def build_params(params = {})
-      params.merge(:auth_token => @config.api_key, :format => 'json')
+      params.merge(auth_token: @config.api_key, format: 'json')
     end
 
     def request(http_verb, path, params = nil)

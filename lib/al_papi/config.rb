@@ -21,7 +21,7 @@ module AlPapi
       @host = DEFAULT_HOST
       @port = DEFAULT_PORT
     end
-    
+
   end
 
 end

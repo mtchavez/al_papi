@@ -18,7 +18,7 @@ describe AlPapi::Keyword do
         expect(@res).to_not be_suspended
         expect(@res.body).to_not be_nil
         expect(@res.code).to eql(200)
-        expect(@res.params).to eql({ :keyword => 'splash town', :auth_token => TEST_KEY, :format => 'json'})
+        expect(@res.params).to eql({ keyword: 'splash town', auth_token: TEST_KEY, format: 'json'})
         expect(@res.path).to eql('/keywords')
       end
 
@@ -47,7 +47,7 @@ describe AlPapi::Keyword do
         expect(@res).to_not be_suspended
         expect(@res.body).to_not be_nil
         expect(@res.code).to eql 200
-        expect(@res.params).to eql({ :keyword => 'splash town', :auth_token => TEST_KEY, :format => 'json'})
+        expect(@res.params).to eql({ keyword: 'splash town', auth_token: TEST_KEY, format: 'json'})
         expect(@res.path).to eql '/keywords/priority'
       end
 

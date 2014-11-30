@@ -1,7 +1,7 @@
 module AlPapi
 
   class Keyword
-    
+
     ##
     #
     # POST a keyword/engine/locale combination to get SERP for.
@@ -16,11 +16,11 @@ module AlPapi
       path = priority ? '/keywords/priority' : '/keywords'
       AlPapi.http.post path, params
     end
-    
+
     ##
     #
     # See post method {AlPapi::Keyword.post} for required params
-    
+
     def self.priority_post(params = {})
       post params, true
     end
@@ -41,5 +41,5 @@ module AlPapi
     end
 
   end
-  
+
 end
