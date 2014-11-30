@@ -13,9 +13,12 @@ require File.dirname(__FILE__) + '/al_papi/request_error'
 require File.dirname(__FILE__) + '/al_papi/response'
 require File.dirname(__FILE__) + '/al_papi/web_insight'
 
-module AlPapi
+def ruby_19?
+  RUBY_VERSION == '1.9.3'
+end
 
-  extend self
+module AlPapi
+  module_function unless ruby_19?
 
   ##
   # @example Configure takes block to set API key to be used in API calls.
@@ -26,6 +29,7 @@ module AlPapi
   def configure
     yield config
   end
+  module_function :configure if ruby_19?
 
   #
   # @return [AlPapi::Config]
@@ -33,9 +37,10 @@ module AlPapi
   def config
     @config ||= Config.new
   end
+  module_function :config if ruby_19?
 
   def http # @private
     Http.new(config)
   end
-
+  module_function :http if ruby_19?
 end

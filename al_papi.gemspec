@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description      = 'Wraps AuthorityLabs Partner API calls in a gem.'
   s.authors          = ['Chavez']
   s.email            = ''
-  s.files            = Dir.glob("{bin,lib}/**/*") + %w[README.md]
+  s.files            = Dir.glob('{bin,lib}/**/*') + %w[README.md]
   s.require_paths    = ['lib']
   s.homepage         = 'http://github.com/mtchavez/al_papi'
   s.rdoc_options     = ['--charset=UTF-8 --main=README.md']

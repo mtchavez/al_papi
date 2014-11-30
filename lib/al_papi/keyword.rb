@@ -1,7 +1,5 @@
 module AlPapi
-
   class Keyword
-    
     ##
     #
     # POST a keyword/engine/locale combination to get SERP for.
@@ -9,18 +7,21 @@ module AlPapi
     # @param keyword    [String] *Required* - The keyword you are ready to get results for.
     # @param engine     [String] _Optional_ - Defaults to google
     # @param locale     [String] _Optional_ - Defaults to en-us. See {AlPapi::Locales} for supported locales.
-    # @param pages_from [String] _Optional_ - Defaults is false. Google specific parameter to get results from locale passed in when set to true.
-    # @param callback   [String] _Optional_ - Default is the callback you have set for your account. Set specific callbacks per request by using this paramerter. A POST is sent to this callback URL when results are returned.
+    # @param pages_from [String] _Optional_ - Defaults is false. Google specific parameter
+    #                                         to get results from locale passed in when set to true.
+    # @param callback   [String] _Optional_ - Default is the callback you have set for your account.
+    #                                         Set specific callbacks per request by using this paramerter.
+    #                                         A POST is sent to this callback URL when results are returned.
 
     def self.post(params = {}, priority = false)
       path = priority ? '/keywords/priority' : '/keywords'
       AlPapi.http.post path, params
     end
-    
+
     ##
     #
     # See post method {AlPapi::Keyword.post} for required params
-    
+
     def self.priority_post(params = {})
       post params, true
     end
@@ -39,7 +40,5 @@ module AlPapi
     def self.get(params = {})
       AlPapi.http.get '/keywords/get', params
     end
-
   end
-  
 end

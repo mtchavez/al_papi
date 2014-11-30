@@ -18,10 +18,10 @@ describe AlPapi::Account do
         account = @res.parsed_body
         expect(account.user).to_not be_nil
         expect(account.user.current_post_count).to eql(2)
-        expect(account.user.hourly_post_limit).to eql(160000)
-        expect(account.user.current_get_count).to eql(5822)
-        expect(account.user.hourly_get_limit).to eql(300000)
-        expect(account.user.current_balance).to eql(-60471.16)
+        expect(account.user.hourly_post_limit).to eql(160_000)
+        expect(account.user.current_get_count).to eql(5_822)
+        expect(account.user.hourly_get_limit).to eql(300_000)
+        expect(account.user.current_balance).to eql(-60_471.16)
       end
 
       it 'returns system messages' do
