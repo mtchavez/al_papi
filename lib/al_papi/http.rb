@@ -24,8 +24,8 @@ module AlPapi
       args = [http_verb, url]
       args << params if http_verb == 'post'
 
-      RestClient.send(*args) do |res, _req, raw_res|
-        body = raw_res.body
+      RestClient.send(*args) do |res|
+        body = res.body
         code = res.code.to_i
 
         self.response = body
