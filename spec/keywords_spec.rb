@@ -95,7 +95,7 @@ describe AlPapi::Keyword do
         expect(@res).to_not be_success
         expect(@res).to_not be_over_limit
         expect(@res).to_not be_suspended
-        expect(@res.body).to be_nil
+        expect(@res.body).to be_empty
         expect(@res.code).to eql 204
         expect(@res.path).to match '/keywords/get'
       end
