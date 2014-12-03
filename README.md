@@ -37,7 +37,7 @@ res = AlPapi::Account.info '1'
 res.body
 
 # You can use the parsed_body method for convenience to access data
-account_info = @res.parsed_body
+account_info = res.parsed_body
 account_info.user.current_balance # 500.00
 account_info.queue.bing_time # 15
 account_info.messages.system # ['The system is back online!']
