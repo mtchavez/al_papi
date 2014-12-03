@@ -3,6 +3,7 @@
 [![Build Status](https://secure.travis-ci.org/mtchavez/al_papi.png)](http://travis-ci.org/mtchavez/al_papi?branch=master)
 [![Coverage Status](https://coveralls.io/repos/mtchavez/al_papi/badge.png?branch=update%2Fdependencies)](https://coveralls.io/r/mtchavez/al_papi?branch=update%2Fdependencies)
 [![Code Climate](https://codeclimate.com/github/mtchavez/al_papi.png)](https://codeclimate.com/github/mtchavez/al_papi)
+[![license](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://raw.githubusercontent.com/mtchavez/al_papi/master/LICENSE)
 
 A wrapper around the Partner API calls. Allows post, priority post and get calls.
 
@@ -250,9 +251,3 @@ Example response
   engine: google
 }
 ```
-
-## License
-
-Written by Chavez
-
-Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
