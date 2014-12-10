@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name             = 'al_papi'
-  s.version          = '1.0.3'
-  s.date             = '2014-04-28'
+  s.version          = '1.0.4'
+  s.date             = '2014-12-10'
   s.summary          = 'AuthorityLabs Partner API Wrapper'
   s.description      = 'Wraps AuthorityLabs Partner API calls in a gem.'
   s.authors          = ['Chavez']

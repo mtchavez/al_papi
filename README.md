@@ -13,6 +13,12 @@ A wrapper around the Partner API calls. Allows post, priority post and get calls
 gem install 'al_papi'
 ```
 
+With bundler
+
+```ruby
+gem 'al_papi', '~> 1.0.4'
+```
+
 ## Configuration
 
 Set configuration options to be used on requests:
