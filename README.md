@@ -1,6 +1,6 @@
 # AuthorityLabs Partner API Gem
 
-[![Latest Version](https://img.shields.io/gem/v/al_papi.svg)](https://github.com/mtchavez/al_papi/releases)
+[![Latest Version](https://img.shields.io/gem/v/al_papi.svg)](http://rubygems.org/gems/al_papi)
 [![Build Status](https://secure.travis-ci.org/mtchavez/al_papi.png)](http://travis-ci.org/mtchavez/al_papi?branch=master)
 [![Coverage Status](https://coveralls.io/repos/mtchavez/al_papi/badge.png?branch=update%2Fdependencies)](https://coveralls.io/r/mtchavez/al_papi?branch=update%2Fdependencies)
 [![Code Climate](https://codeclimate.com/github/mtchavez/al_papi.png)](https://codeclimate.com/github/mtchavez/al_papi)
