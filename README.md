@@ -16,7 +16,7 @@ gem install 'al_papi'
 With bundler
 
 ```ruby
-gem 'al_papi', '~> 1.0.4'
+gem 'al_papi', '~> 1.0.5'
 ```
 
 ## Configuration

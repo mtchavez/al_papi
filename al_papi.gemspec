@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name             = 'al_papi'
-  s.version          = '1.0.4'
-  s.date             = '2014-12-10'
+  s.version          = '1.0.5'
+  s.date             = '2017-12-21'
   s.summary          = 'AuthorityLabs Partner API Wrapper'
   s.description      = 'Wraps AuthorityLabs Partner API calls in a gem.'
   s.authors          = ['Chavez']
@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   # Gem Dependencies
   s.add_dependency 'hashie',      '~> 2.1.0', '>= 2.1.0'
-  s.add_dependency 'rest-client', '~> 1.6.7', '>= 1.6.7'
+  s.add_dependency 'rest-client', '~> 2.0.2', '>= 2.0.2'
 
   # Dev Dependencies
   s.add_development_dependency 'gemcutter', '~> 0.7.1', '>= 0.7.1'
@@ -24,6 +24,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec',     '~> 3.1',   '>= 3.1.0'
   s.add_development_dependency 'simplecov', '~> 0.9',   '>= 0.9.1'
   s.add_development_dependency 'vcr',       '~> 2.9',   '>= 2.9.3'
-  s.add_development_dependency 'webmock',   '~> 1.20',  '>= 1.20.4'
-  s.add_development_dependency 'yard',      '~> 0.8',   '>= 0.8.7.6'
+  s.add_development_dependency 'webmock',   '~> 2.3',   '>= 2.3.2'
+  s.add_development_dependency 'yard',      '~> 0.9',   '>= 0.9.11'
 end
