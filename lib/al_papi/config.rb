@@ -9,7 +9,7 @@ module AlPapi
     DEFAULT_PORT = 80 # @private
 
     attr_accessor :api_key
-    attr_reader :host, :port # @private
+    attr_accessor :host, :port
 
     ##
     #
