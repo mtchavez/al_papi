@@ -5,7 +5,7 @@ module AlPapi
   # Configure API calls using AlPapi.configure
 
   class Config
-    DEFAULT_HOST = 'http://api.trajectdata.com'
+    DEFAULT_HOST = 'http://api.authoritylabs.com'
     DEFAULT_PORT = 80 # @private
 
     attr_accessor :api_key
