@@ -1,16 +1,18 @@
 require 'rubygems'
 require 'bundler'
 require 'yard'
-require 'rspec/core/rake_task'
+require 'rake/testtask'
 
 Bundler::GemHelper.install_tasks
 
-desc 'Run specs'
-RSpec::Core::RakeTask.new('spec') do |t|
-  t.pattern = 'spec/**/*_spec.rb'
+desc 'Run tests'
+Rake::TestTask.new(:test) do |t|
+  t.libs << "test"
+  t.libs << "lib"
+  t.test_files = FileList['test/**/*_test.rb']
 end
 
-task default: 'spec'
+task default: 'test'
 
 YARD::Rake::YardocTask.new(:doc) do |t|
   t.files   = ['lib/**/*.rb', '-', 'README.md']

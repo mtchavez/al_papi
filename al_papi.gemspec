@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'pry',       '~> 0.10',  '>= 0.10.1'
   s.add_development_dependency 'rake',      '~> 10.4',  '>= 10.4.0'
   s.add_development_dependency 'redcarpet', '~> 3.2',   '>= 3.2.1'
-  s.add_development_dependency 'rspec',     '~> 3.1',   '>= 3.1.0'
+  s.add_development_dependency 'test-unit', '~> 3.0',   '>= 3.0.0'
   s.add_development_dependency 'simplecov', '~> 0.9',   '>= 0.9.1'
   s.add_development_dependency 'vcr',       '~> 2.9',   '>= 2.9.3'
   s.add_development_dependency 'webmock',   '~> 2.3',   '>= 2.3.2'
